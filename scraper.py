@@ -105,15 +105,7 @@ def pokreni_pretragu():
                 if pun_link.rstrip("/") == izvor["url"].rstrip("/"):
                     continue
 
-                if pun_link not in postojeci_linkovi:
-                    postojeci_linkovi[pun_link] = {
-                        "naslov": naslov,
-                        "izvor": izvor["skraceno"],
-                        "izvor_pun": izvor["naziv"],
-                        "link": pun_link,
-                        "datum_pronalaska": danas
-                    }
-                    pronadjeno_za_izvor += 1
+                
 
             status_izvora[izvor["skraceno"]] = f"ОК (нових: {pronadjeno_za_izvor})"
         except Exception as e:
