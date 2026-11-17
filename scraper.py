@@ -6,14 +6,12 @@ import requests
 from bs4 import BeautifulSoup
 import urllib3
 
-# Искључујемо упозорења за државне сајтове којима понекад истекне SSL сертификат
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 }
 
-# Кључне речи (ћирилица и латиница) које нас занимају
 KLJUCNE_RECI = [
     "предузетни", "preduzetni",
     "паушал", "pausal",
@@ -75,7 +73,10 @@ def ucitaj_postojece():
 
 def pokreni_pretragu():
     baza = ucitaj_postojece()
-    postojeci_linkovi = {stavka["link"]: stavka for stavka in baza.get("konkursi", [])}
+    # Чувамо постојеће детаље ако већ постоје за неки линк
+    postojeci_detalji = {s["link"]: s.get("detalji", "") for s in baza.get("konkursi", [])}
+    postojeci_linkovi = {s["link"]: s for s in baza.get("konkursi", [])}
+    
     danas = datetime.now().strftime("%Y-%m-%d")
     vreme_sada = datetime.now().strftime("%d.%m.%Y. у %H:%M")
     status_izvora = {}
@@ -101,17 +102,24 @@ def pokreni_pretragu():
                 else:
                     continue
 
-                # Избегавамо навигационе линкове ка самој почетној страници
                 if pun_link.rstrip("/") == izvor["url"].rstrip("/"):
                     continue
 
-                
+                if pun_link not in postojeci_linkovi:
+                    postojeci_linkovi[pun_link] = {
+                        "naslov": naslov,
+                        "izvor": izvor["skraceno"],
+                        "izvor_pun": izvor["naziv"],
+                        "link": pun_link,
+                        "datum_pronalaska": danas,
+                        "detalji": postojeci_detalji.get(pun_link, "")
+                    }
+                    pronadjeno_za_izvor += 1
 
             status_izvora[izvor["skraceno"]] = f"ОК (нових: {pronadjeno_za_izvor})"
         except Exception as e:
-            status_izvora[izvor["skraceno"]] = f"Грешка при приступу ({type(e).__name__})"
+            status_izvora[izvor["skraceno"]] = f"Грешка ({type(e).__name__})"
 
-    # Сортирамо тако да су најновији увек на врху
     svi_konkursi = sorted(
         postojeci_linkovi.values(),
         key=lambda x: x.get("datum_pronalaska", "2000-01-01"),
@@ -121,7 +129,7 @@ def pokreni_pretragu():
     rezultat = {
         "poslednje_azuriranje": vreme_sada,
         "status_izvora": status_izvora,
-        "konkursi": svi_konkursi[:150]  # Чувамо последњих 150 релевантних ставки
+        "konkursi": svi_konkursi[:150]
     }
 
     with open("podaci.json", "w", encoding="utf-8") as f:
