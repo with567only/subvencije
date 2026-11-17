@@ -62,53 +62,43 @@ def odgovara_kljucnim_recima(naslov):
         return False
     return any(rec in n for rec in KLJUCNE_RECI)
 
-def izvuci_tekst_sa_stranice(url):
-    """Улази на линк конкурса и покушава да извуче сажетак текста са странице."""
-    if url.lower().endswith(".pdf"):
-        return "Документ је у PDF формату. Потребно је преузети званични текст конкурса са линка изнад."
-    try:
-        r = requests.get(url, headers=HEADERS, timeout=12, verify=False)
-        r.encoding = r.apparent_encoding or "utf-8"
-        soup = BeautifulSoup(r.text, "html.parser")
-        
-        # Уклањамо меније, футере и скрипте да не купе ђубре
-        for tag in soup(["script", "style", "nav", "footer", "header"]):
-            tag.decompose()
-            
-        paragrafi = [ocisti_tekst(p.get_text()) for p in soup.find_all("p") if len(ocisti_tekst(p.get_text())) > 60]
-        if paragrafi:
-            sazetak = " ".join(paragrafi[:3])
-            if len(sazetak) > 450:
-                sazetak = sazetak[:447] + "..."
-            return sazetak
-    except Exception:
-        pass
-    return ""
-
-def generisi_pametne_detalje(naslov, izvor_skraceno, link):
-    """Комбинује извучени текст са странице и паметну категоризацију услова."""
+def generisi_ciljane_detalje(naslov, izvor_skraceno):
     n = naslov.lower()
-    izvuceno = izvuci_tekst_sa_stranice(link)
     
-    # Аутоматско препознавање типа конкурса и додавање смерница
     if "самозапошљавањ" in n or "samozaposljavanj" in n:
-        tip = "<strong>Тип подршке:</strong> Бесповратна средства за покретање сопственог бизниса (НСЗ).<br><strong>Кључни услови:</strong> Евиденција незапослених НСЗ, завршена обука за предузетништво, обавеза обављања делатности мин. 12 месеци и плаћања доприноса."
-    elif "опрем" in n or "oprem" in n or "инвестиц" in n or "investic" in n:
-        tip = "<strong>Тип подршке:</strong> Суфинансирање набавке нове или половне опреме и машина.<br><strong>Кључни услови:</strong> Најчешће 20-30% бесповратних средстава, остатак повољан кредит или сопствено учешће. Потребна профактура добављача."
+        return (
+            "<strong>Програм:</strong> Самозапошљавање (НСЗ)<br>"
+            "<strong>Ко има право:</strong> Незапослена лица на евиденцији НСЗ која су завршила обуку за развој предузетништва.<br>"
+            "<strong>Облик подршке:</strong> Једнократна бесповратна средства за покретање бизниса (паушалци или књигаши).<br>"
+            "<strong>Главна обавеза:</strong> Редовно обављање делатности и плаћање пореза и доприноса минимум 12 месеци."
+        )
+    elif "опрем" in n or "oprem" in n:
+        return (
+            "<strong>Програм:</strong> Суфинансирање набавке опреме и машина<br>"
+            "<strong>Облик подршке:</strong> Комбинација бесповратних средстава (гранта) и повољног кредита.<br>"
+            "<strong>Документација:</strong> Обавезна профактура добављача опреме и бізнис план / инвестициони програм."
+        )
     elif "старт" in n or "start" in n or "почетни" in n or "pocetni" in n:
-        tip = "<strong>Тип подршке:</strong> Програм за почетнике у пословању (фирме млађе од 2 године).<br><strong>Кључни услови:</strong> Обавезан бизнис план, део средстава је бесповратан (до 30-40%), без хипотеке за мање износе уз јемство или менице."
-    elif "запошљавањ" in n or "zaposljavanj" in n or "теже запошљив" in n:
-        tip = "<strong>Тип подршке:</strong> Субвенција послодавцима за отварање нових радних места.<br><strong>Кључни услови:</strong> Послодавац не сме смањивати број запослених у претходном периоду и мора задржати радника у радном односу одређени период."
+        return (
+            "<strong>Програм:</strong> Подршка почетницима у пословању (Старт-ап)<br>"
+            "<strong>Ко има право:</strong> Предузетници и привредна друштва регистровани у кратком периоду (најчешће до 2 године).<br>"
+            "<strong>Погодности:</strong> Повољни услови кредитирања уз грејс период и део бесповратних средстава."
+        )
+    elif "запошљавањ" in n or "zaposljavanj" in n:
+        return (
+            "<strong>Програм:</strong> Субвенције за запошљавање нових радника<br>"
+            "<strong>Услови за послодавца:</strong> Исплата зараде у складу са законом, задржавање радног односа одређени период (обично 12+ месеци) и несмањивање укупног броја запослених."
+        )
     elif izvor_skraceno == "Град Београд":
-        tip = "<strong>Тип подршке:</strong> Градски подстицаји за микро и мала предузећа и предузетнике на територији Београда.<br><strong>Кључни услови:</strong> Седиште фирме у Београду, измирени локални и републички порези."
+        return (
+            "<strong>Извор:</strong> Град Београд - Секретаријат за привреду<br>"
+            "<strong>Услови:</strong> Седиште привредног субјекта на територији града Београда, измирене пореске обавезе према држави и локалној самоуправи."
+        )
     else:
-        tip = "<strong>Тип подршке:</strong> Јавни позив / конкурс за привредне субјекте.<br><strong>Напомена:</strong> Проверити у званичном тексту да ли обухвата паушалце или само предузетнике књигаше и ДОО."
-
-    rezultat = tip
-    if izvuceno:
-        rezultat += f"<br><br><strong>Извод са странице конкурса:</strong><br><em>{izvuceno}</em>"
-    
-    return rezultat
+        return (
+            f"<strong>Извор подршке:</strong> {izvor_skraceno}<br>"
+            "<strong>Напомена:</strong> Овај јавни позив циља привредне субјекте. Препорука је да се отвори званични документ са линка ради провере тачних рокова, износа и услова за паушалце."
+        )
 
 def ucitaj_postojece():
     if os.path.exists("podaci.json"):
@@ -151,20 +141,19 @@ def pokreni_pretragu():
                 if pun_link.rstrip("/") == izvor["url"].rstrip("/"):
                     continue
 
-                # Ако је конкурс нов или ако стари нема попуњене детаље -> генериши их аутоматски!
-                if pun_link not in postojeci_linkovi or not postojeci_linkovi[pun_link].get("detalji"):
-                    detalji = generisi_pametne_detalje(naslov, izvor["skraceno"], pun_link)
+                if pun_link not in postojeci_linkovi:
+                    detalji = generisi_ciljane_detalje(naslov, izvor["skraceno"])
                     postojeci_linkovi[pun_link] = {
                         "naslov": naslov,
                         "izvor": izvor["skraceno"],
                         "izvor_pun": izvor["naziv"],
                         "link": pun_link,
-                        "datum_pronalaska": postojeci_linkovi.get(pun_link, {}).get("datum_pronalaska", danas),
+                        "datum_pronalaska": danas,
                         "detalji": detalji
                     }
                     pronadjeno_za_izvor += 1
 
-            status_izvora[izvor["skraceno"]] = f"ОК (ажурирано: {pronadjeno_za_izvor})"
+            status_izvora[izvor["skraceno"]] = f"ОК (нових: {pronadjeno_za_izvor})"
         except Exception as e:
             status_izvora[izvor["skraceno"]] = f"Грешка ({type(e).__name__})"
 
