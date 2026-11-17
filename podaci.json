@@ -1,5 +1,83 @@
 {
-  "poslednje_azuriranje": "",
-  "status_izvora": {},
-  "konkursi": []
+  "poslednje_azuriranje": "17.11.2026. у 20:26",
+  "status_izvora": {
+    "НСЗ": "ОК (нових: 2)",
+    "Фонд за развој": "ОК (нових: 0)",
+    "Град Београд": "ОК (нових: 6)",
+    "Министарство привреде": "ОК (нових: 1)"
+  },
+  "konkursi": [
+    {
+      "naslov": "Агенције за запошљавање",
+      "izvor": "НСЗ",
+      "izvor_pun": "Национална служба за запошљавање (НСЗ)",
+      "link": "https://www.nsz.gov.rs/live/nudite-posao/agencije-za-posredovanje-u-zaposljavanju.cid170",
+      "datum_pronalaska": "2026-11-17",
+      "detalji": "<strong>Тип:</strong> Јавни позив за привреднике.<br><strong>Напомена:</strong> Проверити детаље у званичном документу конкурса."
+    },
+    {
+      "naslov": "Испит - Запошљавање",
+      "izvor": "НСЗ",
+      "izvor_pun": "Национална служба за запошљавање (НСЗ)",
+      "link": "https://www.minrzs.gov.rs/sr/dokumenti/dokumenti/ispit-zaposljavanje",
+      "datum_pronalaska": "2026-11-17",
+      "detalji": "<strong>Тип:</strong> Јавни позив за привреднике.<br><strong>Напомена:</strong> Проверити детаље у званичном документу конкурса."
+    },
+    {
+      "naslov": "Градски огласи, конкурси и тендери",
+      "izvor": "Град Београд",
+      "izvor_pun": "Град Београд - Огласи и конкурси",
+      "link": "https://www.beograd.rs/cir/gradski-oglasi",
+      "datum_pronalaska": "2026-11-17",
+      "detalji": "<strong>Тип:</strong> Јавни позив за привреднике.<br><strong>Напомена:</strong> Проверити детаље у званичном документу конкурса."
+    },
+    {
+      "naslov": "Конкурс за доделу 150 стипендија ученицима средњих школа и студентима високошколских установа у Београду за 20206.годину Секретаријат за образовање и дечју заштиту 17.11.2026.",
+      "izvor": "Град Београд",
+      "izvor_pun": "Град Београд - Огласи и конкурси",
+      "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116666/Konkurs-za-dodelu-150-stipendija-ucenicima-srednjih-skola-i-studentima-visokoskolskih-ustanova-u-Beogradu-za-20206.godinu.html",
+      "datum_pronalaska": "2026-11-17",
+      "detalji": "<strong>Тип:</strong> Јавни позив за привреднике.<br><strong>Напомена:</strong> Проверити детаље у званичном документу конкурса."
+    },
+    {
+      "naslov": "Конкурс за доделу 65 стипендија ученицима са инвалидитетом средњих школа и студентима са инвалидитетом високошколских установа у Београду за 2026. годину Секретаријат за образовање и дечју заштиту 17.11.2026.",
+      "izvor": "Град Београд",
+      "izvor_pun": "Град Београд - Огласи и конкурси",
+      "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116664/Konkurs-za-dodelu-65-stipendija-ucenicima-sa-invaliditetom-srednjih-skola-i-studentima-sa-invaliditetom-visokoskolskih-ustanova-u-Beogradu-za-2026.-godinu.html",
+      "datum_pronalaska": "2026-11-17",
+      "detalji": "<strong>Тип:</strong> Јавни позив за привреднике.<br><strong>Напомена:</strong> Проверити детаље у званичном документу конкурса."
+    },
+    {
+      "naslov": "Списак кандидата који испуњавају услове да учествују у изборним радњама на Jавном конкурсу за попуњавање радних места службеника Градска управа града Београда 16.11.2026.",
+      "izvor": "Град Београд",
+      "izvor_pun": "Град Београд - Огласи и конкурси",
+      "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116662/Spisak-kandidata-koji-ispunjavaju-uslove-da-ucestvuju-u-izbornim-radnjama-na-Javnom-konkursu-za-popunjavanje-radnih-mesta-sluzbenika.html",
+      "datum_pronalaska": "2026-11-17",
+      "detalji": "<strong>Тип:</strong> Јавни позив за привреднике.<br><strong>Напомена:</strong> Проверити детаље у званичном документу конкурса."
+    },
+    {
+      "naslov": "Списак кандидата који испуњавају услове да учествују у изборним радњама на Jавном конкурсу за попуњавање радних места службеника Градска управа града Београда 23.10.2026.",
+      "izvor": "Град Београд",
+      "izvor_pun": "Град Београд - Огласи и конкурси",
+      "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116350/Spisak-kandidata-koji-ispunjavaju-uslove-da-ucestvuju-u-izbornim-radnjama-na-Javnom-konkursu-za-popunjavanje-radnih-mesta-sluzbenika.html",
+      "datum_pronalaska": "2026-11-17",
+      "detalji": "<strong>Тип:</strong> Јавни позив за привреднике.<br><strong>Напомена:</strong> Проверити детаље у званичном документу конкурса."
+    },
+    {
+      "naslov": "Јавни конкурс за попуњавање радних места службеника у Градској управи града Београда Градска управа града Београда 22.10.2026.",
+      "izvor": "Град Београд",
+      "izvor_pun": "Град Београд - Огласи и конкурси",
+      "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116338/Javni-konkurs-za-popunjavanje-radnih-mesta-sluzbenika-u-Gradskoj-upravi-grada-Beograda.html",
+      "datum_pronalaska": "2026-11-17",
+      "detalji": "<strong>Тип:</strong> Јавни позив за привреднике.<br><strong>Напомена:</strong> Проверити детаље у званичном документу конкурса."
+    },
+    {
+      "naslov": "Сектор за развој малих и средњих предузећа и предузетништва",
+      "izvor": "Министарство привреде",
+      "izvor_pun": "Министарство привреде",
+      "link": "https://privreda.gov.rs/ministarstvo/organizaciona-struktura/sektor-za-razvoj-malih-i-srednjih-preduzeca-i-preduzetnistva",
+      "datum_pronalaska": "2026-11-17",
+      "detalji": "<strong>Тип:</strong> Јавни позив за привреднике.<br><strong>Напомена:</strong> Проверити детаље у званичном документу конкурса."
+    }
+  ]
 }
