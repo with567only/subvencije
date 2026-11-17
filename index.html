@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Субвенције и олакшице за предузетнике и паушалце</title>
+    <title>Субвенције и олакшице за предузетнике</title>
     <style>
         :root {
             --primary: #1e3a8a;
             --secondary: #2563eb;
-            --accent: #f59e0b;
             --bg: #f8fafc;
             --card-bg: #ffffff;
             --text: #1e293b;
@@ -104,13 +103,6 @@
             border-radius: 4px;
             margin-bottom: 4px;
         }
-        .konkurs-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
         .konkurs-title a {
             color: var(--secondary);
             text-decoration: none;
@@ -160,10 +152,9 @@
         <div id="last-update" style="margin-top: 10px; font-size: 0.85rem; opacity: 0.8;">Учитавање података...</div>
     </header>
 
-    <!-- Провера по општинама -->
     <div class="card">
         <h2>Провера по београдским општинама</h2>
-        <p style="font-size: 0.9rem; color: var(--text-light);">Изабери општину да тренутно провериш званичне конкурсе и огласе на њеном сајту:</p>
+        <p style="font-size: 0.9rem; color: var(--text-light);">Изабери општину да тренутно провериш званичне конкурсе на њеном сајту:</p>
         <div class="municipality-box">
             <select id="opstina-select">
                 <option value="obrenovac">Обреновац</option>
@@ -188,7 +179,6 @@
         </div>
     </div>
 
-    <!-- Активни конкурси из базе -->
     <div class="card">
         <h2>Актуелни конкурси и позиви (Главни извори)</h2>
         <div id="konkursi-list">
@@ -196,14 +186,12 @@
         </div>
     </div>
 
-    <!-- Статичне пореске олакшице -->
     <div class="card">
         <h2>Стабилне пореске олакшице и олакшице за запошљавање</h2>
-        <p style="font-size: 0.9rem; color: var(--text-light);">Законске олакшице које се ретко мењају, али су увек актуелне за паушалце и предузетнике:</p>
         <ul class="static-list">
             <li><strong>Олакшице за новозапослене раднике:</strong> Повратак дела пореза и доприноса за лица која се запошљавају у складу са Законом о порезу на доходак грађана.</li>
-            <li><strong>Самозапошљавање преко НСЗ:</strong> Једнократна бескуматна средства за покретање сопственог бизниса (традиционални годишњи конкурс НСЗ).</li>
-            <li><strong>Фонд за развој:</strong> Програми подршке за почетнике у пословању (старт-ап) и набавку производне опреме уз учешће од 20% и повољне кредите.</li>
+            <li><strong>Самозапошљавање преко НСЗ:</strong> Једнократна бескуматна средства за покретање сопственог бизниса.</li>
+            <li><strong>Фонд за развој:</strong> Програми подршке за почетнике у пословању и набавку производне опреме.</li>
         </ul>
     </div>
 </div>
@@ -219,21 +207,22 @@
 
             let listaDiv = document.getElementById('konkursi-list');
             if (!data.konkursi || data.konkursi.length === 0) {
-                listaDiv.innerHTML = "<p>Тренутно нема пронађених активних конкурса по задатим кључним речима.</p>";
+                listaDiv.innerHTML = "<p>Тренутно нема пронађених активних конкурса.</p>";
                 return;
             }
 
             let html = "";
             data.konkursi.forEach((k, index) => {
-                let detaljiSadrzaj = k.detalji ? `<div id="detalji-${index}" class="detalji-sadrzaj">${k.detalji}</div>` : `<div id="detalji-${index}" class="detalji-sadrzaj"><em>За овај конкурс још увек нису унети детаљни сажеци и обрасци.</em></div>`;
+                let detaljiSadrzaj = k.detalji && k.detalji.trim() !== "" ? 
+                    `<div id="detalji-${index}" class="detalji-sadrzaj" style="display:block;">${k.detalji}</div>` : 
+                    `<div id="detalji-${index}" class="detalji-sadrzaj"><em>За овај конкурс још увек нису унети детаљи.</em></div>`;
+                
                 let dugmeDetalji = `<button class="btn-detalji" onclick="toggleDetalji(${index})">📋 Детаљи и упутство</button>`;
 
                 html += `
                     <div class="konkurs-item">
                         <span class="badge">${k.izvor}</span>
-                        <div class="konkurs-header">
-                            <div class="konkurs-title"><a href="${k.link}" target="_blank">${k.naslov}</a></div>
-                        </div>
+                        <div class="konkurs-title"><a href="${k.link}" target="_blank">${k.naslov}</a></div>
                         <div class="meta-info">Пронађено: ${k.datum_pronalaska} | Извор: ${k.izvor_pun}</div>
                         ${dugmeDetalji}
                         ${detaljiSadrzaj}
@@ -242,7 +231,7 @@
             });
             listaDiv.innerHTML = html;
         } catch (e) {
-            document.getElementById('konkursi-list').innerHTML = "<p style='color: red;'>Грешка при учитавању података. Покушајте касније.</p>";
+            document.getElementById('konkursi-list').innerHTML = "<p style='color: red;'>Грешка при учитавању података.</p>";
         }
     }
 
@@ -277,8 +266,7 @@
             "sopot": "https://www.sopot.rs",
             "surcin": "https://www.surcin.rs"
         };
-        let targetUrl = urls[val] || "https://www.beograd.rs";
-        window.open(targetUrl, '_blank');
+        window.open(urls[val] || "https://www.beograd.rs", '_blank');
     }
 
     ucitajPodatke();
