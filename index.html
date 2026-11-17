@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Субвенције и олакшице за предузетнике и паушалце</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --secondary: #2563eb;
+            --accent: #f59e0b;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0 0 8px 0;
+            font-size: 1.5rem;
+        }
+        header p {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .card h2 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: var(--primary);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 8px;
+        }
+        .municipality-box {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        select, button {
+            padding: 10px 14px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            font-size: 0.95rem;
+        }
+        select {
+            flex: 1;
+            min-width: 200px;
+            background: white;
+        }
+        button {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background-color: #1d4ed8;
+        }
+        .konkurs-item {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .konkurs-item:last-child {
+            border-bottom: none;
+        }
+        .badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-bottom: 4px;
+        }
+        .konkurs-title a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .konkurs-title a:hover {
+            text-decoration: underline;
+        }
+        .meta-info {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+        .static-list {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        .static-list li {
+            margin-bottom: 6px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Субвенције и олакшице за предузетнике</h1>
+        <p>Праћење активних конкурса (НСЗ, Фонд за развој, Град Београд, Министарство привреде)</p>
+        <div id="last-update" style="margin-top: 10px; font-size: 0.85rem; opacity: 0.8;">Учитавање података...</div>
+    </header>
+
+    <!-- Провера по општинама -->
+    <div class="card">
+        <h2>Провера по београдским општинама</h2>
+        <p style="font-size: 0.9rem; color: var(--text-light);">Изабери општину да тренутно провериш званичне конкурсе и огласе на њеном сајту:</p>
+        <div class="municipality-box">
+            <select id="opstina-select">
+                <option value="obrenovac">Обреновац</option>
+                <option value="beograd">Градска општина Стари Град</option>
+                <option value="novibeograd">Нови Београд</option>
+                <option value="zemun">Земун</option>
+                <option value="cukarica">Чукарица</option>
+                <option value="vozdovac">Вождовац</option>
+                <option value="zvezdara">Звездара</option>
+                <option value="palilula">Палилула</option>
+                <option value="rakovica">Раковица</option>
+                <option value="vracar">Врачар</option>
+                <option value="savski-venac">Савски венац</option>
+                <option value="barajevo">Барајево</option>
+                <option value="grocka">Гроцка</option>
+                <option value="lazarevac">Лазаревац</option>
+                <option value="mladenovac">Младеновац</option>
+                <option value="sopot">Сопот</option>
+                <option value="surcin">Сурчин</option>
+            </select>
+            <button onclick="proveriOpstinu()">Провери општину</button>
+        </div>
+    </div>
+
+    <!-- Активни конкурси из базе -->
+    <div class="card">
+        <h2>Актуелни конкурси и позиви (Главни извори)</h2>
+        <div id="konkursi-list">
+            <p>Учитавање актуелних конкурса...</p>
+        </div>
+    </div>
+
+    <!-- Статичне пореске олакшице -->
+    <div class="card">
+        <h2>Стабилне пореске олакшице и олакшице за запошљавање</h2>
+        <p style="font-size: 0.9rem; color: var(--text-light);">Законске олакшице које се ретко мењају, али су увек актуелне за паушалце и предузетнике:</p>
+        <ul class="static-list">
+            <li><strong>Олакшице за новозапослене раднике:</strong> Повратак дела пореза и доприноса за лица која се запошљавају у складу са Законом о порезу на доходак грађана.</li>
+            <li><strong>Самозапошљавање преко НСЗ:</strong> Једнократна бескуматна средства за покретање сопственог бизниса (традиционални годишњи конкурс НСЗ).</li>
+            <li><strong>Фонд за развој:</strong> Програми подршке за почетнике у пословању (старт-ап) и набавку производне опреме уз учешће од 20% и повољне кредите.</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    async function ucitajPodatke() {
+        try {
+            let response = await fetch('podaci.json?' + new Date().getTime());
+            if (!response.ok) throw new Error("Фајл није пронађен");
+            let data = await response.json();
+
+            document.getElementById('last-update').innerText = "Последње ажурирање: " + (data.poslednje_azuriranje || "Непознато");
+
+            let listaDiv = document.getElementById('konkursi-list');
+            if (!data.konkursi || data.konkursi.length === 0) {
+                listaDiv.innerHTML = "<p>Тренутно нема пронађених активних конкурса по задатим кључним речима.</p>";
+                return;
+            }
+
+            let html = "";
+            data.konkursi.forEach(k => {
+                html += `
+                    <div class="konkurs-item">
+                        <span class="badge">${k.izvor}</span>
+                        <div class="konkurs-title"><a href="${k.link}" target="_blank">${k.naslov}</a></div>
+                        <div class="meta-info">Пронађено: ${k.datum_pronalaska} | Извор: ${k.izvor_pun}</div>
+                    </div>
+                `;
+            });
+            listaDiv.innerHTML = html;
+        } catch (e) {
+            document.getElementById('konkursi-list').innerHTML = "<p style='color: red;'>Грешка при учитавању података. Покушајте касније.</p>";
+        }
+    }
+
+    function proveriOpstinu() {
+        let select = document.getElementById('opstina-select');
+        let val = select.value;
+        let urls = {
+            "obrenovac": "https://www.obrenovac.rs",
+            "beograd": "https://www.starigrad.org.rs",
+            "novibeograd": "https://www.novibeograd.rs",
+            "zemun": "https://www.zemun.rs",
+            "cukarica": "https://www.cukarica.rs",
+            "vozdovac": "https://www.vozdovac.rs",
+            "zvezdara": "https://www.zvezdara.rs",
+            "palilula": "https://www.palilula.org.rs",
+            "rakovica": "https://www.rakovica.rs",
+            "vracar": "https://www.vracar.rs",
+            "savski-venac": "https://www.savskivenac.rs",
+            "barajevo": "https://www.barajevo.rs",
+            "grocka": "https://www.grocka.rs",
+            "lazarevac": "https://www.lazarevac.rs",
+            "mladenovac": "https://www.mladenovac.rs",
+            "sopot": "https://www.sopot.rs",
+            "surcin": "https://www.surcin.rs"
+        };
+        let targetUrl = urls[val] || "https://www.beograd.rs";
+        window.open(targetUrl, '_blank');
+    }
+
+    ucitajPodatke();
+</script>
+
+</body>
+</html>
