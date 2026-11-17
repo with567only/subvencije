@@ -88,7 +88,7 @@
             background-color: #1d4ed8;
         }
         .konkurs-item {
-            padding: 12px 0;
+            padding: 14px 0;
             border-bottom: 1px solid var(--border);
         }
         .konkurs-item:last-child {
@@ -104,6 +104,13 @@
             border-radius: 4px;
             margin-bottom: 4px;
         }
+        .konkurs-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
         .konkurs-title a {
             color: var(--secondary);
             text-decoration: none;
@@ -116,6 +123,24 @@
             font-size: 0.85rem;
             color: var(--text-light);
             margin-top: 4px;
+        }
+        .btn-detalji {
+            background-color: #0ea5e9;
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            margin-top: 6px;
+        }
+        .btn-detalji:hover {
+            background-color: #0284c7;
+        }
+        .detalji-sadrzaj {
+            display: none;
+            background: #f1f5f9;
+            border-left: 4px solid var(--secondary);
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.9rem;
         }
         .static-list {
             padding-left: 20px;
@@ -199,18 +224,34 @@
             }
 
             let html = "";
-            data.konkursi.forEach(k => {
+            data.konkursi.forEach((k, index) => {
+                let detaljiSadrzaj = k.detalji ? `<div id="detalji-${index}" class="detalji-sadrzaj">${k.detalji}</div>` : `<div id="detalji-${index}" class="detalji-sadrzaj"><em>За овај конкурс још увек нису унети детаљни сажеци и обрасци.</em></div>`;
+                let dugmeDetalji = `<button class="btn-detalji" onclick="toggleDetalji(${index})">📋 Детаљи и упутство</button>`;
+
                 html += `
                     <div class="konkurs-item">
                         <span class="badge">${k.izvor}</span>
-                        <div class="konkurs-title"><a href="${k.link}" target="_blank">${k.naslov}</a></div>
+                        <div class="konkurs-header">
+                            <div class="konkurs-title"><a href="${k.link}" target="_blank">${k.naslov}</a></div>
+                        </div>
                         <div class="meta-info">Пронађено: ${k.datum_pronalaska} | Извор: ${k.izvor_pun}</div>
+                        ${dugmeDetalji}
+                        ${detaljiSadrzaj}
                     </div>
                 `;
             });
             listaDiv.innerHTML = html;
         } catch (e) {
             document.getElementById('konkursi-list').innerHTML = "<p style='color: red;'>Грешка при учитавању података. Покушајте касније.</p>";
+        }
+    }
+
+    function toggleDetalji(index) {
+        let el = document.getElementById('detalji-' + index);
+        if (el.style.display === "block") {
+            el.style.display = "none";
+        } else {
+            el.style.display = "block";
         }
     }
 
