@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Субвенције и олакшице за предузетнике</title>
+    <title>Субвенције и олакшице за предузетнике (v1.2)</title>
     <style>
         :root {
             --primary: #1e3a8a;
@@ -37,6 +37,17 @@
         header h1 {
             margin: 0 0 8px 0;
             font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .version-badge {
+            background: rgba(255, 255, 255, 0.2);
+            font-size: 0.85rem;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-weight: 600;
         }
         header p {
             margin: 0;
@@ -138,7 +149,7 @@
 
 <div class="container">
     <header>
-        <h1>Субвенције и олакшице за предузетнике</h1>
+        <h1>Субвенције и олакшице за предузетнике <span class="version-badge">Верзија 1.2</span></h1>
         <p>Праћење активних конкурса (НСЗ, Фонд за развој, Град Београд, Министарство привреде)</p>
         <div id="last-update" style="margin-top: 10px; font-size: 0.85rem; opacity: 0.8;">Учитавање података...</div>
     </header>
