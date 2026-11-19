@@ -62,6 +62,35 @@ def odgovara_kljucnim_recima(naslov):
         return False
     return any(rec in n for rec in KLJUCNE_RECI)
 
+def izvuci_srz_subvencije(naslov, izvor_skraceno):
+    n = naslov.lower()
+
+    # Прво покушај да извучеш експлицитне проценте или износе из самог наслова
+    pronadjeno = []
+    procenti = re.findall(r'\d+\s*%', naslov)
+    iznosi = re.findall(r'(?:до\s*)?\d{1,3}(?:[.,\s]\d{3})*\s*(?:рсд|rsd|дин|динара)', n, flags=re.IGNORECASE)
+
+    if procenti:
+        pronadjeno.append(", ".join(p.replace(" ", "") for p in procenti))
+    if iznosi:
+        pronadjeno.append(", ".join(re.sub(r'\s+', ' ', i).strip() for i in iznosi))
+    if pronadjeno:
+        return " | ".join(pronadjeno)
+
+    # Ако наслов нема бројке, извуци кључну олакшицу према типу позива
+    if "самозапошљавањ" in n or "samozaposljavanj" in n:
+        return "једнократна субвенција за старт (проверити важећи износ позива)"
+    if "запошљавањ" in n or "zaposljavanj" in n:
+        return "субвенција по запосленом / олакшице пореза и доприноса"
+    if "опрем" in n or "oprem" in n:
+        return "бесповратна средства + кредит (до вишемилионских износа по позиву)"
+    if "старт" in n or "start" in n or "почетни" in n or "pocetni" in n:
+        return "старт-ап подршка (грант / повољан кредит)"
+    if izvor_skraceno == "Град Београд":
+        return "локална субвенција Града Београда (износ дефинисан позивом)"
+
+    return "проверити тачан износ/проценат у позиву"
+
 def generisi_detaljnu_razradu(naslov, izvor_skraceno):
     n = naslov.lower()
     
@@ -161,10 +190,13 @@ def pokreni_pretragu():
                 if pun_link.rstrip("/") == izvor["url"].rstrip("/"):
                     continue
 
+                srz = izvuci_srz_subvencije(naslov, izvor["skraceno"])
+                detalji = generisi_detaljnu_razradu(naslov, izvor["skraceno"])
+
                 if pun_link not in postojeci_linkovi:
-                    detalji = generisi_detaljnu_razradu(naslov, izvor["skraceno"])
                     postojeci_linkovi[pun_link] = {
                         "naslov": naslov,
+                        "srz_subvencije": srz,
                         "izvor": izvor["skraceno"],
                         "izvor_pun": izvor["naziv"],
                         "link": pun_link,
@@ -172,6 +204,10 @@ def pokreni_pretragu():
                         "detalji": detalji
                     }
                     pronadjeno_za_izvor += 1
+                else:
+                    # Освежи срж и детаље и за већ постојеће записе
+                    postojeci_linkovi[pun_link]["srz_subvencije"] = srz
+                    postojeci_linkovi[pun_link]["detalji"] = detalji
 
             status_izvora[izvor["skraceno"]] = f"ОК (нових: {pronadjeno_za_izvor})"
         except Exception as e:
