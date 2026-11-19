@@ -1,5 +1,5 @@
 {
-  "poslednje_azuriranje": "19.11.2026. у 13:43",
+  "poslednje_azuriranje": "19.11.2026. у 13:54",
   "status_izvora": {
     "НСЗ": "ОК (нових: 0)",
     "Фонд за развој": "ОК (нових: 0)",
@@ -14,7 +14,33 @@
       "izvor_pun": "Град Београд - Огласи и конкурси",
       "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116410/Obavestenje-Sekretarijata-za-poljoprivredu.html",
       "datum_pronalaska": "2026-11-19",
-      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама."
+      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама.",
+      "obrasci": [
+        {
+          "naziv": "Сервисни центар 11011",
+          "url": "https://www.beograd.rs/cir/prijava-problema"
+        },
+        {
+          "naziv": "Пореске пријаве и захтеви",
+          "url": "https://www.beograd.rs/cir/usluge/a108969/Poreske-prijave-i-zahtevi.html"
+        },
+        {
+          "naziv": "Музички програм",
+          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/muzicki-program"
+        },
+        {
+          "naziv": "Филмски и позоришни програм",
+          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/filmski-i-pozorisni-program"
+        },
+        {
+          "naziv": "Уметнички програм",
+          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/umetnicki-program"
+        },
+        {
+          "naziv": "Дечји програм",
+          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/decji-program"
+        }
+      ]
     },
     {
       "naslov": "Коначна ранг-листа о додели подстицајних средстава у области сточарства на територији града Београда за 2026. годину Секретаријат за пољопривреду 16.10.2026.",
@@ -23,7 +49,33 @@
       "izvor_pun": "Град Београд - Огласи и конкурси",
       "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116256/Konacna-rang-lista-o-dodeli-podsticajnih-sredstava-u-oblasti-stocarstva-na-teritoriji-grada-Beograda-za-2026.-godinu.html",
       "datum_pronalaska": "2026-11-19",
-      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама."
+      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама.",
+      "obrasci": [
+        {
+          "naziv": "Сервисни центар 11011",
+          "url": "https://www.beograd.rs/cir/prijava-problema"
+        },
+        {
+          "naziv": "Пореске пријаве и захтеви",
+          "url": "https://www.beograd.rs/cir/usluge/a108969/Poreske-prijave-i-zahtevi.html"
+        },
+        {
+          "naziv": "Музички програм",
+          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/muzicki-program"
+        },
+        {
+          "naziv": "Филмски и позоришни програм",
+          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/filmski-i-pozorisni-program"
+        },
+        {
+          "naziv": "Уметнички програм",
+          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/umetnicki-program"
+        },
+        {
+          "naziv": "Дечји програм",
+          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/decji-program"
+        }
+      ]
     },
     {
       "naslov": "Коначна ранг-листа о додели подстицајних средстава у области воћарства, повртарства и ратарства на територији града Београда за 2026. годину Секретаријат за пољопривреду 16.10.2026.",
@@ -32,7 +84,33 @@
       "izvor_pun": "Град Београд - Огласи и конкурси",
       "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116257/Konacna-rang-lista-o-dodeli-podsticajnih-sredstava-u-oblasti-vocarstva-povrtarstva-i-ratarstva-na-teritoriji-grada-Beograda-za-2026.-godinu.html",
       "datum_pronalaska": "2026-11-19",
-      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама."
+      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама.",
+      "obrasci": [
+        {
+          "naziv": "Сервисни центар 11011",
+          "url": "https://www.beograd.rs/cir/prijava-problema"
+        },
+        {
+          "naziv": "Пореске пријаве и захтеви",
+          "url": "https://www.beograd.rs/cir/usluge/a108969/Poreske-prijave-i-zahtevi.html"
+        },
+        {
+          "naziv": "Музички програм",
+          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/muzicki-program"
+        },
+        {
+          "naziv": "Филмски и позоришни програм",
+          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/filmski-i-pozorisni-program"
+        },
+        {
+          "naziv": "Уметнички програм",
+          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/umetnicki-program"
+        },
+        {
+          "naziv": "Дечји програм",
+          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/decji-program"
+        }
+      ]
     },
     {
       "naslov": "Коначна ранг-листа о додели подстицајних средстава у области пчеларства на територији града Београда за 2026. годину Секретаријат за пољопривреду 16.10.2026.",
@@ -41,7 +119,33 @@
       "izvor_pun": "Град Београд - Огласи и конкурси",
       "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116258/Konacna-rang-lista-o-dodeli-podsticajnih-sredstava-u-oblasti-pcelarstva-na-teritoriji-grada-Beograda-za-2026.-godinu.html",
       "datum_pronalaska": "2026-11-19",
-      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама."
+      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама.",
+      "obrasci": [
+        {
+          "naziv": "Сервисни центар 11011",
+          "url": "https://www.beograd.rs/cir/prijava-problema"
+        },
+        {
+          "naziv": "Пореске пријаве и захтеви",
+          "url": "https://www.beograd.rs/cir/usluge/a108969/Poreske-prijave-i-zahtevi.html"
+        },
+        {
+          "naziv": "Музички програм",
+          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/muzicki-program"
+        },
+        {
+          "naziv": "Филмски и позоришни програм",
+          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/filmski-i-pozorisni-program"
+        },
+        {
+          "naziv": "Уметнички програм",
+          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/umetnicki-program"
+        },
+        {
+          "naziv": "Дечји програм",
+          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/decji-program"
+        }
+      ]
     },
     {
       "naslov": "Коначна ранг-листа о додели подстицајних средстава за набавку трактора на територији града Београда за 2026. годину Секретаријат за пољопривреду 16.10.2026.",
@@ -50,7 +154,33 @@
       "izvor_pun": "Град Београд - Огласи и конкурси",
       "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116261/Konacna-rang-lista-o-dodeli-podsticajnih-sredstava-za-nabavku-traktora-na-teritoriji-grada-Beograda-za-2026.-godinu.html",
       "datum_pronalaska": "2026-11-19",
-      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама."
+      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама.",
+      "obrasci": [
+        {
+          "naziv": "Сервисни центар 11011",
+          "url": "https://www.beograd.rs/cir/prijava-problema"
+        },
+        {
+          "naziv": "Пореске пријаве и захтеви",
+          "url": "https://www.beograd.rs/cir/usluge/a108969/Poreske-prijave-i-zahtevi.html"
+        },
+        {
+          "naziv": "Музички програм",
+          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/muzicki-program"
+        },
+        {
+          "naziv": "Филмски и позоришни програм",
+          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/filmski-i-pozorisni-program"
+        },
+        {
+          "naziv": "Уметнички програм",
+          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/umetnicki-program"
+        },
+        {
+          "naziv": "Дечји програм",
+          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/decji-program"
+        }
+      ]
     },
     {
       "naslov": "Коначна ранг-листа о додели подстицајних средстава за набавку пољопривредних прикључних машина на територији града Београда за 2026. годину Секретаријата за пољопривреду 16.10.2026.",
@@ -59,7 +189,33 @@
       "izvor_pun": "Град Београд - Огласи и конкурси",
       "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116259/Konacna-rang-lista-o-dodeli-podsticajnih-sredstava-za-nabavku-poljoprivrednih-prikljucnih-masina-na-teritoriji-grada-Beograda-za-2026.-godinu.html",
       "datum_pronalaska": "2026-11-19",
-      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама."
+      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама.",
+      "obrasci": [
+        {
+          "naziv": "Сервисни центар 11011",
+          "url": "https://www.beograd.rs/cir/prijava-problema"
+        },
+        {
+          "naziv": "Пореске пријаве и захтеви",
+          "url": "https://www.beograd.rs/cir/usluge/a108969/Poreske-prijave-i-zahtevi.html"
+        },
+        {
+          "naziv": "Музички програм",
+          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/muzicki-program"
+        },
+        {
+          "naziv": "Филмски и позоришни програм",
+          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/filmski-i-pozorisni-program"
+        },
+        {
+          "naziv": "Уметнички програм",
+          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/umetnicki-program"
+        },
+        {
+          "naziv": "Дечји програм",
+          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/decji-program"
+        }
+      ]
     },
     {
       "naslov": "Министарство привреде Републике Србије",
@@ -68,7 +224,17 @@
       "izvor_pun": "Министарство привреде",
       "link": "https://privreda.gov.rs/",
       "datum_pronalaska": "2026-11-19",
-      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ — Министарство привреде</strong><br>• <strong>1. Провера административних услова:</strong> Обавезно преузети званични конкурс са линка и проверити рок за подношење пријава.<br>• <strong>2. Стандардни сет докумената:</strong> Решење из АПР-а, потврда Народне банке (НБС) да рачун није у блокади, уверење из Пореске управе."
+      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ — Министарство привреде</strong><br>• <strong>1. Провера административних услова:</strong> Обавезно преузети званични конкурс са линка и проверити рок за подношење пријава.<br>• <strong>2. Стандардни сет докумената:</strong> Решење из АПР-а, потврда Народне банке (НБС) да рачун није у блокади, уверење из Пореске управе.",
+      "obrasci": [
+        {
+          "naziv": "Захтев за кредитну подршку предузећима у поступку приватизације",
+          "url": "https://privreda.gov.rs/aktuelno/vesti-i-saopstenja/zahtev-za-kreditnu-podrsku-preduzecima-od-strateskog-znacaja-za"
+        },
+        {
+          "naziv": "Образац / документ",
+          "url": "https://preduzetnistvo.gov.rs/vesti/paket-10-programa-podrske-mspp-ministarstva-privrede-u-2024/"
+        }
+      ]
     },
     {
       "naslov": "Потврде о статусу привредног друштава из поступка приватизације",
@@ -77,7 +243,8 @@
       "izvor_pun": "Министарство привреде",
       "link": "https://privreda.gov.rs/usluge/potvrde/potvrde-o-statusu-privrednog-drustva-iz-postupka-privatizacije",
       "datum_pronalaska": "2026-11-19",
-      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ — Министарство привреде</strong><br>• <strong>1. Провера административних услова:</strong> Обавезно преузети званични конкурс са линка и проверити рок за подношење пријава.<br>• <strong>2. Стандардни сет докумената:</strong> Решење из АПР-а, потврда Народне банке (НБС) да рачун није у блокади, уверење из Пореске управе."
+      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ — Министарство привреде</strong><br>• <strong>1. Провера административних услова:</strong> Обавезно преузети званични конкурс са линка и проверити рок за подношење пријава.<br>• <strong>2. Стандардни сет докумената:</strong> Решење из АПР-а, потврда Народне банке (НБС) да рачун није у блокади, уверење из Пореске управе.",
+      "obrasci": []
     },
     {
       "naslov": "Уношење назива „Србија“ у име привредног друштва",
@@ -86,7 +253,33 @@
       "izvor_pun": "Министарство привреде",
       "link": "https://privreda.gov.rs/usluge/unosenje-naziva-srbija-u-ime-privrednog-drustva",
       "datum_pronalaska": "2026-11-19",
-      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ — Министарство привреде</strong><br>• <strong>1. Провера административних услова:</strong> Обавезно преузети званични конкурс са линка и проверити рок за подношење пријава.<br>• <strong>2. Стандардни сет докумената:</strong> Решење из АПР-а, потврда Народне банке (НБС) да рачун није у блокади, уверење из Пореске управе."
+      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ — Министарство привреде</strong><br>• <strong>1. Провера административних услова:</strong> Обавезно преузети званични конкурс са линка и проверити рок за подношење пријава.<br>• <strong>2. Стандардни сет докумената:</strong> Решење из АПР-а, потврда Народне банке (НБС) да рачун није у блокади, уверење из Пореске управе.",
+      "obrasci": [
+        {
+          "naziv": "Више информација о условима за добијање претходне сагласности за уношење назива “Србија“ у пословно име привредног др...",
+          "url": "https://privreda.gov.rs/index%2ephp/https%3A//privreda.gov.rs/sites/default/files/2021-08/NAZIV-SRBIJA-OSNOVANO.doc"
+        },
+        {
+          "naziv": "Захтев за давање претходне сагласности за уношење речи \"Србија\" у пословно име привредног друштва које је основано34....",
+          "url": "https://privreda.gov.rs/index%2ephp/https%3A//privreda.gov.rs/sites/default/files/2023-09/10.00.0001_obrazac-Zahteva.docx"
+        },
+        {
+          "naziv": "Више информација о условима за добијање претходне сагласности за уношење назива “Србија“ у пословно име привредног др...",
+          "url": "https://privreda.gov.rs/index%2ephp/https%3A//privreda.gov.rs/sites/default/files/2021-08/NAZIV-SRBIJA-OSNOVANO-2.doc"
+        },
+        {
+          "naziv": "Инструкција за уплату таксе за поступање по захтеву 199.73 КБ",
+          "url": "https://privreda.gov.rs/index%2ephp/https%3A//privreda.gov.rs/sites/default/files/2025-10/Instrukcije-Za-Uplatu-Takse-Za-NAZIV-SRBIJA.pdf"
+        },
+        {
+          "naziv": "Пример уплатнице за поступање по захтеву1.28 МБ",
+          "url": "https://privreda.gov.rs/index%2ephp/https%3A//privreda.gov.rs/sites/default/files/2025-10/TAKSA%201.pdf"
+        },
+        {
+          "naziv": "Инструкција за уплату таксе за издавање решења199.73 КБ",
+          "url": "https://privreda.gov.rs/index%2ephp/https%3A//privreda.gov.rs/sites/default/files/2025-10/Instrukcije-Za-Uplatu-Takse-Za-NAZIV-SRBIJA_0.pdf"
+        }
+      ]
     },
     {
       "naslov": "Министарство привреде и Фонд за развој, обавештавају све заинтересоване да се продужавају јавни позиви по појединим програмима",
@@ -95,7 +288,29 @@
       "link": "https://fondzarazvoj.co.rs/%d0%bc%d0%b8%d0%bd%d0%b8%d1%81%d1%82%d0%b0%d1%80%d1%81%d1%82%d0%b2%d0%be-%d0%bf%d1%80%d0%b8%d0%b2%d1%80%d0%b5%d0%b4%d0%b5-%d0%b8-%d1%84%d0%be%d0%bd%d0%b4-%d0%b7%d0%b0-%d1%80%d0%b0%d0%b7%d0%b2%d0%be/",
       "datum_pronalaska": "2026-11-18",
       "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ — Фонд за развој</strong><br>• <strong>1. Провера административних услова:</strong> Обавезно преузети званични конкурс са линка и проверити рок за подношење пријава.<br>• <strong>2. Стандардни сет докумената:</strong> Решење из АПР-а, потврда Народне банке (НБС) да рачун није у блокади, уверење из Пореске управе.",
-      "srz_subvencije": "детаљи и износи у тексту позива"
+      "srz_subvencije": "детаљи и износи у тексту позива",
+      "obrasci": [
+        {
+          "naziv": "Документа",
+          "url": "https://fondzarazvoj.co.rs/dokumenta/"
+        },
+        {
+          "naziv": "Подношење захтева за приступ информацијама од јавног значаја",
+          "url": "https://fondzarazvoj.co.rs/podnosenje-zahteva-za-pristup/"
+        },
+        {
+          "naziv": "ПРИЈЕМ ЗАХТЕВА",
+          "url": "https://portal.fondzarazvoj.co.rs/Account/Login?ReturnUrl=%2F"
+        },
+        {
+          "naziv": "Репрограми кредита",
+          "url": "https://fondzarazvoj.co.rs/reprogrami-kredita/"
+        },
+        {
+          "naziv": "Списак одобрених / одбијених захтева",
+          "url": "https://fondzarazvoj.co.rs/spisak-odobrenih-odbijenih-zahteva/"
+        }
+      ]
     },
     {
       "naslov": "Фонд за развој Републике Србије и Министарство привреде обавештавају све заинтересоване да су расписани јавни позиви за доделу бесповратних и кредитних средстава по Програмима",
@@ -104,7 +319,33 @@
       "link": "https://fondzarazvoj.co.rs/obavestenjeavgust/",
       "datum_pronalaska": "2026-11-18",
       "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ — Фонд за развој</strong><br>• <strong>1. Провера административних услова:</strong> Обавезно преузети званични конкурс са линка и проверити рок за подношење пријава.<br>• <strong>2. Стандардни сет докумената:</strong> Решење из АПР-а, потврда Народне банке (НБС) да рачун није у блокади, уверење из Пореске управе.",
-      "srz_subvencije": "100%"
+      "srz_subvencije": "100%",
+      "obrasci": [
+        {
+          "naziv": "Програм „МЛАДИ СТВАРАЈУ СРБИЈУ“ – Програм финансијске подршке младим предузетницима у 2026. год.",
+          "url": "https://fondzarazvoj.co.rs/програм-финансијске-подршке-младим-п/"
+        },
+        {
+          "naziv": "Програм „ВРАТИ СЕ И СТВАРАЈ“ – Програм подршке покретању и развоју пословања повратника из иностранства у 2026. год.",
+          "url": "https://fondzarazvoj.co.rs/програм-врати-се-и-стварај-прогр/"
+        },
+        {
+          "naziv": "Програм финансијске подршке за производњу намештаја и прераду дрвета у 2026. год.",
+          "url": "https://fondzarazvoj.co.rs/програм-финансијске-подршке-за-произ/"
+        },
+        {
+          "naziv": "Програм подршке развоју производног простора „ГРАДИМО ПРОСТОР ЗА ТВОЈ РАСТ“",
+          "url": "https://fondzarazvoj.co.rs/програм-подршке-развоју-производног/"
+        },
+        {
+          "naziv": "Програм финансијске подршке за производњу прехрамбених производа од 100% домаће сировине у 2026. год. „ДОМАЋИ КВАЛИТЕ...",
+          "url": "https://fondzarazvoj.co.rs/програм-финансијске-подршке-за-произ-2/"
+        },
+        {
+          "naziv": "Програм „СТВАРАОЦИ СРБИЈЕ“ – општи програм финансијске подршке сектору МСПП у 2026. год.",
+          "url": "https://fondzarazvoj.co.rs/програм-ствараоци-србије-општи-п/"
+        }
+      ]
     }
   ]
 }
