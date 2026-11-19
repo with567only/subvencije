@@ -1,5 +1,5 @@
 {
-  "poslednje_azuriranje": "19.11.2026. у 13:54",
+  "poslednje_azuriranje": "19.11.2026. у 14:56",
   "status_izvora": {
     "НСЗ": "ОК (нових: 0)",
     "Фонд за развој": "ОК (нових: 0)",
@@ -14,31 +14,27 @@
       "izvor_pun": "Град Београд - Огласи и конкурси",
       "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116410/Obavestenje-Sekretarijata-za-poljoprivredu.html",
       "datum_pronalaska": "2026-11-19",
-      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама.",
+      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>  - Образац пријаве на јавни конкурс Града Београда.<br>  - Извод из АПР-а (важећи статус).<br>  - Потврда Пореске управе о измиреним пореским обавезама.<br>• <strong>3. Помоћ при попуњавању обрасца:</strong> Попунити сва обавезна поља на званичном обрасцу без празних кључних рубрика, ускладити адресу и ПИБ са АПР изводом и проверити рокове за допуну документације.",
       "obrasci": [
         {
-          "naziv": "Сервисни центар 11011",
-          "url": "https://www.beograd.rs/cir/prijava-problema"
+          "naziv": "Zakljucak-ponistenje-JP-prikljucne-masine.pdf",
+          "url": "https://static.beograd.rs/Binary/12012/Zakljucak-ponistenje-JP-prikljucne-masine.pdf"
         },
         {
-          "naziv": "Пореске пријаве и захтеви",
-          "url": "https://www.beograd.rs/cir/usluge/a108969/Poreske-prijave-i-zahtevi.html"
+          "naziv": "Zakljucak-ponistenje-JP-traktori.pdf",
+          "url": "https://static.beograd.rs/Binary/12014/Zakljucak-ponistenje-JP-traktori.pdf"
         },
         {
-          "naziv": "Музички програм",
-          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/muzicki-program"
+          "naziv": "Zakljucak-ponistenje-JP-pcelarstvo.pdf",
+          "url": "https://static.beograd.rs/Binary/12013/Zakljucak-ponistenje-JP-pcelarstvo.pdf"
         },
         {
-          "naziv": "Филмски и позоришни програм",
-          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/filmski-i-pozorisni-program"
+          "naziv": "Zakljucak-ponistenje-JP-stocarstvo.pdf",
+          "url": "https://static.beograd.rs/Binary/12010/Zakljucak-ponistenje-JP-stocarstvo.pdf"
         },
         {
-          "naziv": "Уметнички програм",
-          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/umetnicki-program"
-        },
-        {
-          "naziv": "Дечји програм",
-          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/decji-program"
+          "naziv": "Zakljucak-ponistenje-JP-VPR.pdf",
+          "url": "https://static.beograd.rs/Binary/12011/Zakljucak-ponistenje-JP-VPR.pdf"
         }
       ]
     },
@@ -49,31 +45,11 @@
       "izvor_pun": "Град Београд - Огласи и конкурси",
       "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116256/Konacna-rang-lista-o-dodeli-podsticajnih-sredstava-u-oblasti-stocarstva-na-teritoriji-grada-Beograda-za-2026.-godinu.html",
       "datum_pronalaska": "2026-11-19",
-      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама.",
+      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>  - Образац пријаве на јавни конкурс Града Београда.<br>  - Извод из АПР-а (важећи статус).<br>  - Потврда Пореске управе о измиреним пореским обавезама.<br>• <strong>3. Помоћ при попуњавању обрасца:</strong> Попунити сва обавезна поља на званичном обрасцу без празних кључних рубрика, ускладити адресу и ПИБ са АПР изводом и проверити рокове за допуну документације.",
       "obrasci": [
         {
-          "naziv": "Сервисни центар 11011",
-          "url": "https://www.beograd.rs/cir/prijava-problema"
-        },
-        {
-          "naziv": "Пореске пријаве и захтеви",
-          "url": "https://www.beograd.rs/cir/usluge/a108969/Poreske-prijave-i-zahtevi.html"
-        },
-        {
-          "naziv": "Музички програм",
-          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/muzicki-program"
-        },
-        {
-          "naziv": "Филмски и позоришни програм",
-          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/filmski-i-pozorisni-program"
-        },
-        {
-          "naziv": "Уметнички програм",
-          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/umetnicki-program"
-        },
-        {
-          "naziv": "Дечји програм",
-          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/decji-program"
+          "naziv": "Konacna-rang-lista-o-dodeli-podsticajnih-sredstava-u-oblasti-stocarstva-na-teritoriji-grada-Beograda-za-2026.-godinu.pdf",
+          "url": "https://static.beograd.rs/Binary/11974/Konacna-rang-lista-o-dodeli-podsticajnih-sredstava-u-oblasti-stocarstva-na-teritoriji-grada-Beograda-za-2026.-godinu.pdf"
         }
       ]
     },
@@ -84,31 +60,11 @@
       "izvor_pun": "Град Београд - Огласи и конкурси",
       "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116257/Konacna-rang-lista-o-dodeli-podsticajnih-sredstava-u-oblasti-vocarstva-povrtarstva-i-ratarstva-na-teritoriji-grada-Beograda-za-2026.-godinu.html",
       "datum_pronalaska": "2026-11-19",
-      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама.",
+      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>  - Образац пријаве на јавни конкурс Града Београда.<br>  - Извод из АПР-а (важећи статус).<br>  - Потврда Пореске управе о измиреним пореским обавезама.<br>• <strong>3. Помоћ при попуњавању обрасца:</strong> Попунити сва обавезна поља на званичном обрасцу без празних кључних рубрика, ускладити адресу и ПИБ са АПР изводом и проверити рокове за допуну документације.",
       "obrasci": [
         {
-          "naziv": "Сервисни центар 11011",
-          "url": "https://www.beograd.rs/cir/prijava-problema"
-        },
-        {
-          "naziv": "Пореске пријаве и захтеви",
-          "url": "https://www.beograd.rs/cir/usluge/a108969/Poreske-prijave-i-zahtevi.html"
-        },
-        {
-          "naziv": "Музички програм",
-          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/muzicki-program"
-        },
-        {
-          "naziv": "Филмски и позоришни програм",
-          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/filmski-i-pozorisni-program"
-        },
-        {
-          "naziv": "Уметнички програм",
-          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/umetnicki-program"
-        },
-        {
-          "naziv": "Дечји програм",
-          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/decji-program"
+          "naziv": "Konacna-rang-lista-u-oblasti-vocarstva-povrtarstva-i-ratarstva.pdf",
+          "url": "https://static.beograd.rs/Binary/11975/Konacna-rang-lista-u-oblasti-vocarstva-povrtarstva-i-ratarstva.pdf"
         }
       ]
     },
@@ -119,31 +75,11 @@
       "izvor_pun": "Град Београд - Огласи и конкурси",
       "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116258/Konacna-rang-lista-o-dodeli-podsticajnih-sredstava-u-oblasti-pcelarstva-na-teritoriji-grada-Beograda-za-2026.-godinu.html",
       "datum_pronalaska": "2026-11-19",
-      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама.",
+      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>  - Образац пријаве на јавни конкурс Града Београда.<br>  - Извод из АПР-а (важећи статус).<br>  - Потврда Пореске управе о измиреним пореским обавезама.<br>• <strong>3. Помоћ при попуњавању обрасца:</strong> Попунити сва обавезна поља на званичном обрасцу без празних кључних рубрика, ускладити адресу и ПИБ са АПР изводом и проверити рокове за допуну документације.",
       "obrasci": [
         {
-          "naziv": "Сервисни центар 11011",
-          "url": "https://www.beograd.rs/cir/prijava-problema"
-        },
-        {
-          "naziv": "Пореске пријаве и захтеви",
-          "url": "https://www.beograd.rs/cir/usluge/a108969/Poreske-prijave-i-zahtevi.html"
-        },
-        {
-          "naziv": "Музички програм",
-          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/muzicki-program"
-        },
-        {
-          "naziv": "Филмски и позоришни програм",
-          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/filmski-i-pozorisni-program"
-        },
-        {
-          "naziv": "Уметнички програм",
-          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/umetnicki-program"
-        },
-        {
-          "naziv": "Дечји програм",
-          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/decji-program"
+          "naziv": "Konacna-rang-lista-o-dodeli-podsticajnih-sredstava-u-oblasti-pcelarstva-na-teritoriji-grada-Beograda-za-2026.-godinu.pdf",
+          "url": "https://static.beograd.rs/Binary/11976/Konacna-rang-lista-o-dodeli-podsticajnih-sredstava-u-oblasti-pcelarstva-na-teritoriji-grada-Beograda-za-2026.-godinu.pdf"
         }
       ]
     },
@@ -154,31 +90,11 @@
       "izvor_pun": "Град Београд - Огласи и конкурси",
       "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116261/Konacna-rang-lista-o-dodeli-podsticajnih-sredstava-za-nabavku-traktora-na-teritoriji-grada-Beograda-za-2026.-godinu.html",
       "datum_pronalaska": "2026-11-19",
-      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама.",
+      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>  - Образац пријаве на јавни конкурс Града Београда.<br>  - Извод из АПР-а (важећи статус).<br>  - Потврда Пореске управе о измиреним пореским обавезама.<br>• <strong>3. Помоћ при попуњавању обрасца:</strong> Попунити сва обавезна поља на званичном обрасцу без празних кључних рубрика, ускладити адресу и ПИБ са АПР изводом и проверити рокове за допуну документације.",
       "obrasci": [
         {
-          "naziv": "Сервисни центар 11011",
-          "url": "https://www.beograd.rs/cir/prijava-problema"
-        },
-        {
-          "naziv": "Пореске пријаве и захтеви",
-          "url": "https://www.beograd.rs/cir/usluge/a108969/Poreske-prijave-i-zahtevi.html"
-        },
-        {
-          "naziv": "Музички програм",
-          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/muzicki-program"
-        },
-        {
-          "naziv": "Филмски и позоришни програм",
-          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/filmski-i-pozorisni-program"
-        },
-        {
-          "naziv": "Уметнички програм",
-          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/umetnicki-program"
-        },
-        {
-          "naziv": "Дечји програм",
-          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/decji-program"
+          "naziv": "Konacna-rang-lista-o-dodeli-podsticajnih-sredstava-za-nabavku-traktora-na-teritoriji-grada-Beograda-za-2026.-godinu.pdf",
+          "url": "https://static.beograd.rs/Binary/11978/Konacna-rang-lista-o-dodeli-podsticajnih-sredstava-za-nabavku-traktora-na-teritoriji-grada-Beograda-za-2026.-godinu.pdf"
         }
       ]
     },
@@ -189,31 +105,11 @@
       "izvor_pun": "Град Београд - Огласи и конкурси",
       "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116259/Konacna-rang-lista-o-dodeli-podsticajnih-sredstava-za-nabavku-poljoprivrednih-prikljucnih-masina-na-teritoriji-grada-Beograda-za-2026.-godinu.html",
       "datum_pronalaska": "2026-11-19",
-      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама.",
+      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>  - Образац пријаве на јавни конкурс Града Београда.<br>  - Извод из АПР-а (важећи статус).<br>  - Потврда Пореске управе о измиреним пореским обавезама.<br>• <strong>3. Помоћ при попуњавању обрасца:</strong> Попунити сва обавезна поља на званичном обрасцу без празних кључних рубрика, ускладити адресу и ПИБ са АПР изводом и проверити рокове за допуну документације.",
       "obrasci": [
         {
-          "naziv": "Сервисни центар 11011",
-          "url": "https://www.beograd.rs/cir/prijava-problema"
-        },
-        {
-          "naziv": "Пореске пријаве и захтеви",
-          "url": "https://www.beograd.rs/cir/usluge/a108969/Poreske-prijave-i-zahtevi.html"
-        },
-        {
-          "naziv": "Музички програм",
-          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/muzicki-program"
-        },
-        {
-          "naziv": "Филмски и позоришни програм",
-          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/filmski-i-pozorisni-program"
-        },
-        {
-          "naziv": "Уметнички програм",
-          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/umetnicki-program"
-        },
-        {
-          "naziv": "Дечји програм",
-          "url": "https://www.beograd.rs/cir/zivot-u-beogradu/decji-program"
+          "naziv": "Konacna-rang-lista-o-dodeli-podsticajnih-sredstava-za-nabavku-poljoprivrednih-prikljucnih-masina-na-teritoriji-grada-...",
+          "url": "https://static.beograd.rs/Binary/11981/Konacna-rang-lista-o-dodeli-podsticajnih-sredstava-za-nabavku-poljoprivrednih-prikljucnih-masina-na-teritoriji-grada-Beograda-za-2026.-godinu-.pdf"
         }
       ]
     },
