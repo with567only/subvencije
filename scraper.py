@@ -181,13 +181,13 @@ def izvuci_rokove_i_datume(naslov, soup_stranice=None):
                 rok_mecevi.append(dat)
 
     if rok_mecevi and cisti_naslov_datumi:
-        return f"Објављено: {cisti_naslov_datumi[0]} | Рок до: {rok_mecevi[0]}"
+        return f"Објављено: {cisti_naslov_datumi[0]} | Траје до: {rok_mecevi[0]}"
     if rok_mecevi:
-        return f"Рок до: {' / '.join(rok_mecevi[:2])}"
+        return f"Траје до: {' / '.join(rok_mecevi[:2])}"
     if cisti_naslov_datumi:
-        return f"Датум у називу: {' / '.join(cisti_naslov_datumi[:2])} (рок проверити у позиву)"
+        return f"Објављено: {' / '.join(cisti_naslov_datumi[:2])} (рок није наведен)"
 
-    return "Рок и датум расписивања проверити у тексту позива"
+    return "Рок није наведен у позиву"
 
 def izvuci_srz_subvencije(naslov, izvor_skraceno, pun_link, soup_stranice=None):
     n = naslov.lower()
