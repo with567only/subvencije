@@ -46,6 +46,18 @@ ZABRANJENE_RECI = [
     "контакти", "kontakti"
 ]
 
+OBRAZAC_NASTAVCI = (".pdf", ".doc", ".docx", ".xls", ".xlsx", ".zip", ".rar")
+OBRAZAC_KLJUCNE_RECI = [
+    "образац", "obrazac",
+    "пријав", "prijav",
+    "формулар", "formular",
+    "захтев", "zahtev",
+    "бизнис", "biznis",
+    "документ", "dokument",
+    "упутств", "uputstv",
+    "програм", "program"
+]
+
 IZVORI = [
     {
         "naziv": "Национална служба за запошљавање (НСЗ)",
@@ -75,6 +87,16 @@ IZVORI = [
 
 def ocisti_tekst(tekst):
     return re.sub(r'\s+', ' ', tekst).strip()
+
+def napravi_pun_link(href, baza_url):
+    href = (href or "").strip()
+    if not href or href.startswith("#") or href.lower().startswith("javascript:") or href.lower().startswith("mailto:"):
+        return ""
+    if href.startswith("/"):
+        return baza_url.rstrip("/") + href
+    if href.startswith("http"):
+        return href
+    return baza_url.rstrip("/") + "/" + href.lstrip("/")
 
 def odgovara_kljucnim_recima(naslov, izvor_skraceno=""):
     n = naslov.lower()
@@ -117,21 +139,15 @@ def pronadji_brojeve_u_tekstu(tekst):
 
     return pronadjeno[:4]
 
-def izvuci_srz_subvencije(naslov, izvor_skraceno, pun_link):
+def izvuci_srz_subvencije(naslov, izvor_skraceno, pun_link, soup_stranice=None):
     n = naslov.lower()
     pronadjeno = pronadji_brojeve_u_tekstu(naslov)
 
-    if not pronadjeno and pun_link.startswith("http") and not pun_link.lower().endswith(".pdf"):
-        try:
-            r = requests.get(pun_link, headers=HEADERS, timeout=12, verify=False)
-            r.encoding = r.apparent_encoding or "utf-8"
-            s = BeautifulSoup(r.text, "html.parser")
-            glavni = s.find("main") or s.find("article") or s.body
-            if glavni:
-                tekst_stranice = ocisti_tekst(glavni.get_text())[:4000]
-                pronadjeno = pronadji_brojeve_u_tekstu(tekst_stranice)
-        except Exception:
-            pass
+    if not pronadjeno and soup_stranice is not None:
+        glavni = soup_stranice.find("main") or soup_stranice.find("article") or soup_stranice.body
+        if glavni:
+            tekst_stranice = ocisti_tekst(glavni.get_text())[:4000]
+            pronadjeno = pronadji_brojeve_u_tekstu(tekst_stranice)
 
     if pronadjeno:
         return " | ".join(pronadjeno)
@@ -148,6 +164,44 @@ def izvuci_srz_subvencije(naslov, izvor_skraceno, pun_link):
         return "градска субвенција за привреду"
 
     return "детаљи и износи у тексту позива"
+
+def izvuci_obrasce_sa_stranice(soup_stranice, baza_url, izvor_url):
+    obrasci = []
+    vidjeni_url = set()
+
+    if soup_stranice is None:
+        return obrasci
+
+    glavni = soup_stranice.find("main") or soup_stranice.find("article") or soup_stranice.body or soup_stranice
+
+    for a in glavni.find_all("a", href=True):
+        pun_url = napravi_pun_link(a["href"], baza_url)
+        if not pun_url or pun_url in vidjeni_url:
+            continue
+        if pun_url.rstrip("/") == izvor_url.rstrip("/"):
+            continue
+
+        tekst_linka = ocisti_tekst(a.get_text())
+        donji_url = pun_url.lower()
+        donji_tekst = tekst_linka.lower()
+
+        je_fajl = donji_url.endswith(OBRAZAC_NASTAVCI)
+        je_obrazac_po_kljucu = any(k in donji_url or k in donji_tekst for k in OBRAZAC_KLJUCNE_RECI)
+
+        if je_fajl or je_obrazac_po_kljucu:
+            vidjeni_url.add(pun_url)
+            naziv_obrasca = tekst_linka if len(tekst_linka) >= 4 else pun_url.split("/")[-1] or "Образац / документ"
+            if len(naziv_obrasca) > 120:
+                naziv_obrasca = naziv_obrasca[:117] + "..."
+            obrasci.append({
+                "naziv": naziv_obrasca,
+                "url": pun_url
+            })
+
+        if len(obrasci) >= 6:
+            break
+
+    return obrasci
 
 def generisi_detaljnu_razradu(naslov, izvor_skraceno):
     n = naslov.lower()
@@ -236,22 +290,24 @@ def pokreni_pretragu():
 
             for a in soup.find_all("a", href=True):
                 naslov = ocisti_tekst(a.get_text())
-                href = a["href"].strip()
-
                 if not odgovara_kljucnim_recima(naslov, izvor["skraceno"]):
                     continue
 
-                if href.startswith("/"):
-                    pun_link = izvor["baza_url"].rstrip("/") + href
-                elif href.startswith("http"):
-                    pun_link = href
-                else:
+                pun_link = napravi_pun_link(a["href"], izvor["baza_url"])
+                if not pun_link or pun_link.rstrip("/") == izvor["url"].rstrip("/"):
                     continue
 
-                if pun_link.rstrip("/") == izvor["url"].rstrip("/"):
-                    continue
+                soup_stranice = None
+                if pun_link.startswith("http") and not pun_link.lower().endswith(OBRAZAC_NASTAVCI):
+                    try:
+                        r_pod = requests.get(pun_link, headers=HEADERS, timeout=12, verify=False)
+                        r_pod.encoding = r_pod.apparent_encoding or "utf-8"
+                        soup_stranice = BeautifulSoup(r_pod.text, "html.parser")
+                    except Exception:
+                        soup_stranice = None
 
-                srz = izvuci_srz_subvencije(naslov, izvor["skraceno"], pun_link)
+                srz = izvuci_srz_subvencije(naslov, izvor["skraceno"], pun_link, soup_stranice)
+                obrasci = izvuci_obrasce_sa_stranice(soup_stranice, izvor["baza_url"], pun_link)
                 detalji = generisi_detaljnu_razradu(naslov, izvor["skraceno"])
 
                 if pun_link not in postojeci_linkovi:
@@ -262,12 +318,14 @@ def pokreni_pretragu():
                         "izvor_pun": izvor["naziv"],
                         "link": pun_link,
                         "datum_pronalaska": danas,
-                        "detalji": detalji
+                        "detalji": detalji,
+                        "obrasci": obrasci
                     }
                     pronadjeno_za_izvor += 1
                 else:
                     postojeci_linkovi[pun_link]["srz_subvencije"] = srz
                     postojeci_linkovi[pun_link]["detalji"] = detalji
+                    postojeci_linkovi[pun_link]["obrasci"] = obrasci
 
             status_izvora[izvor["skraceno"]] = f"ОК (нових: {pronadjeno_za_izvor})"
         except Exception as e:
