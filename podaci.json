@@ -1,10 +1,12 @@
 {
-  "poslednje_azuriranje": "19.11.2026. у 15:56",
+  "poslednje_azuriranje": "19.11.2026. у 16:47",
   "status_izvora": {
     "НСЗ": "ОК (нових: 0)",
     "Фонд за развој": "ОК (нових: 0)",
     "Град Београд": "ОК (нових: 0)",
-    "Министарство привреде": "ОК (нових: 0)"
+    "Министарство привреде": "ОК (нових: 0)",
+    "Пореска управа": "ОК (нових: 23)",
+    "Министарство финансија": "ОК (нових: 2)"
   },
   "konkursi": [
     {
@@ -161,6 +163,504 @@
           "url": "https://privreda.gov.rs/index%2ephp/https%3A//privreda.gov.rs/sites/default/files/2025-10/Instrukcije-Za-Uplatu-Takse-Za-NAZIV-SRBIJA_0.pdf"
         }
       ]
+    },
+    {
+      "naslov": "Пријавите неправилности у вези са издавањем фискалних рачуна",
+      "srz_subvencije": "пореско обавештење / олакшице и рокови",
+      "rokovi": "Рок није наведен у позиву",
+      "izvor": "Пореска управа",
+      "izvor_pun": "Пореска управа Републике Србије",
+      "link": "https://www.purs.gov.rs/kontakt/kontakt-centar/nepravilnosti-fiskalni-racuni.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>ДЕТАЉАН ВОДИЧ: Пореска управа</strong><br>- <strong>1. Намена:</strong> Провера пореских рокова, олакшица, повраћаја и евиденције.<br>- <strong>2. Провера:</strong> Прочитати званично обавештење на линку и проверити примену на ПИБ / еПорези.<br>- <strong>3. Примена:</strong> Ускладити пријаве, рокове и уплате са важећим прописима.",
+      "obrasci": [
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/pravna-lica/pdv/refakcija-pdv/obrasci.html"
+        },
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/nerezidenti/pdv/refakcija-pdv/Obrasci.html"
+        }
+      ]
+    },
+    {
+      "naslov": "Организационе јединице – утврђивање пореза на пренос апсолутних права и пореза на наслеђе и поклон",
+      "srz_subvencije": "пореско обавештење / олакшице и рокови",
+      "rokovi": "Рок није наведен у позиву",
+      "izvor": "Пореска управа",
+      "izvor_pun": "Пореска управа Републике Србије",
+      "link": "https://www.purs.gov.rs/adresar/oj-izdvojene-aktivnosti.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>ДЕТАЉАН ВОДИЧ: Пореска управа</strong><br>- <strong>1. Намена:</strong> Провера пореских рокова, олакшица, повраћаја и евиденције.<br>- <strong>2. Провера:</strong> Прочитати званично обавештење на линку и проверити примену на ПИБ / еПорези.<br>- <strong>3. Примена:</strong> Ускладити пријаве, рокове и уплате са важећим прописима.",
+      "obrasci": [
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/pravna-lica/pdv/refakcija-pdv/obrasci.html"
+        },
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/nerezidenti/pdv/refakcija-pdv/Obrasci.html"
+        }
+      ]
+    },
+    {
+      "naslov": "Шалтер \"Ваш порезник\"",
+      "srz_subvencije": "пореско обавештење / олакшице и рокови",
+      "rokovi": "Рок није наведен у позиву",
+      "izvor": "Пореска управа",
+      "izvor_pun": "Пореска управа Републике Србије",
+      "link": "https://www.purs.gov.rs/adresar/salter-vas-poreznik.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>ДЕТАЉАН ВОДИЧ: Пореска управа</strong><br>- <strong>1. Намена:</strong> Провера пореских рокова, олакшица, повраћаја и евиденције.<br>- <strong>2. Провера:</strong> Прочитати званично обавештење на линку и проверити примену на ПИБ / еПорези.<br>- <strong>3. Примена:</strong> Ускладити пријаве, рокове и уплате са важећим прописима.",
+      "obrasci": [
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/pravna-lica/pdv/refakcija-pdv/obrasci.html"
+        },
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/nerezidenti/pdv/refakcija-pdv/Obrasci.html"
+        }
+      ]
+    },
+    {
+      "naslov": "Уговори о избегавању двоструког опорезивања",
+      "srz_subvencije": "пореско обавештење / олакшице и рокови",
+      "rokovi": "Рок није наведен у позиву",
+      "izvor": "Пореска управа",
+      "izvor_pun": "Пореска управа Републике Србије",
+      "link": "https://www.purs.gov.rs/pravna-lica/pregled-propisa/ugovori-dvostruko-oporezivanje.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>ДЕТАЉАН ВОДИЧ: Пореска управа</strong><br>- <strong>1. Намена:</strong> Провера пореских рокова, олакшица, повраћаја и евиденције.<br>- <strong>2. Провера:</strong> Прочитати званично обавештење на линку и проверити примену на ПИБ / еПорези.<br>- <strong>3. Примена:</strong> Ускладити пријаве, рокове и уплате са важећим прописима.",
+      "obrasci": [
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/pravna-lica/pdv/refakcija-pdv/obrasci.html"
+        },
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/nerezidenti/pdv/refakcija-pdv/Obrasci.html"
+        }
+      ]
+    },
+    {
+      "naslov": "Списак добара са стопом опорезивања",
+      "srz_subvencije": "пореско обавештење / олакшице и рокови",
+      "rokovi": "Рок није наведен у позиву",
+      "izvor": "Пореска управа",
+      "izvor_pun": "Пореска управа Републике Србије",
+      "link": "https://www.purs.gov.rs/pravna-lica/pdv/spisak-dobara-sa-stopom-oporezivanja.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>ДЕТАЉАН ВОДИЧ: Пореска управа</strong><br>- <strong>1. Намена:</strong> Провера пореских рокова, олакшица, повраћаја и евиденције.<br>- <strong>2. Провера:</strong> Прочитати званично обавештење на линку и проверити примену на ПИБ / еПорези.<br>- <strong>3. Примена:</strong> Ускладити пријаве, рокове и уплате са важећим прописима.",
+      "obrasci": [
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/pravna-lica/pdv/refakcija-pdv/obrasci.html"
+        },
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/nerezidenti/pdv/refakcija-pdv/Obrasci.html"
+        }
+      ]
+    },
+    {
+      "naslov": "Порез на добит - ПДП",
+      "srz_subvencije": "пореско обавештење / олакшице и рокови",
+      "rokovi": "Рок није наведен у позиву",
+      "izvor": "Пореска управа",
+      "izvor_pun": "Пореска управа Републике Србије",
+      "link": "https://www.purs.gov.rs/pravna-lica/porez-na-dobit.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>ДЕТАЉАН ВОДИЧ: Пореска управа</strong><br>- <strong>1. Намена:</strong> Провера пореских рокова, олакшица, повраћаја и евиденције.<br>- <strong>2. Провера:</strong> Прочитати званично обавештење на линку и проверити примену на ПИБ / еПорези.<br>- <strong>3. Примена:</strong> Ускладити пријаве, рокове и уплате са важећим прописима.",
+      "obrasci": [
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/pravna-lica/pdv/refakcija-pdv/obrasci.html"
+        },
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/nerezidenti/pdv/refakcija-pdv/Obrasci.html"
+        }
+      ]
+    },
+    {
+      "naslov": "Уговори о избегавању двоструког опорезивања",
+      "srz_subvencije": "пореско обавештење / олакшице и рокови",
+      "rokovi": "Рок није наведен у позиву",
+      "izvor": "Пореска управа",
+      "izvor_pun": "Пореска управа Републике Србије",
+      "link": "https://www.purs.gov.rs/preduzetnici/pregled-propisa/ugovoridvostrukooporezivanje.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>ДЕТАЉАН ВОДИЧ: Пореска управа</strong><br>- <strong>1. Намена:</strong> Провера пореских рокова, олакшица, повраћаја и евиденције.<br>- <strong>2. Провера:</strong> Прочитати званично обавештење на линку и проверити примену на ПИБ / еПорези.<br>- <strong>3. Примена:</strong> Ускладити пријаве, рокове и уплате са важећим прописима.",
+      "obrasci": [
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/pravna-lica/pdv/refakcija-pdv/obrasci.html"
+        },
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/nerezidenti/pdv/refakcija-pdv/Obrasci.html"
+        }
+      ]
+    },
+    {
+      "naslov": "Списак добара са стопом опорезивања",
+      "srz_subvencije": "пореско обавештење / олакшице и рокови",
+      "rokovi": "Рок није наведен у позиву",
+      "izvor": "Пореска управа",
+      "izvor_pun": "Пореска управа Републике Србије",
+      "link": "https://www.purs.gov.rs/preduzetnici/pdv/spisak-dobara-sa-stopom-oporezivanja.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>ДЕТАЉАН ВОДИЧ: Пореска управа</strong><br>- <strong>1. Намена:</strong> Провера пореских рокова, олакшица, повраћаја и евиденције.<br>- <strong>2. Провера:</strong> Прочитати званично обавештење на линку и проверити примену на ПИБ / еПорези.<br>- <strong>3. Примена:</strong> Ускладити пријаве, рокове и уплате са важећим прописима.",
+      "obrasci": [
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/pravna-lica/pdv/refakcija-pdv/obrasci.html"
+        },
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/nerezidenti/pdv/refakcija-pdv/Obrasci.html"
+        }
+      ]
+    },
+    {
+      "naslov": "Уговори о избегавању двоструког опорезивања",
+      "srz_subvencije": "пореско обавештење / олакшице и рокови",
+      "rokovi": "Рок није наведен у позиву",
+      "izvor": "Пореска управа",
+      "izvor_pun": "Пореска управа Републике Србије",
+      "link": "https://www.purs.gov.rs/fizicka-lica/pregled-propisa/ugovoridvostrukooporezivanje.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>ДЕТАЉАН ВОДИЧ: Пореска управа</strong><br>- <strong>1. Намена:</strong> Провера пореских рокова, олакшица, повраћаја и евиденције.<br>- <strong>2. Провера:</strong> Прочитати званично обавештење на линку и проверити примену на ПИБ / еПорези.<br>- <strong>3. Примена:</strong> Ускладити пријаве, рокове и уплате са важећим прописима.",
+      "obrasci": [
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/pravna-lica/pdv/refakcija-pdv/obrasci.html"
+        },
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/nerezidenti/pdv/refakcija-pdv/Obrasci.html"
+        }
+      ]
+    },
+    {
+      "naslov": "Списак добара са стопом опорезивања",
+      "srz_subvencije": "пореско обавештење / олакшице и рокови",
+      "rokovi": "Рок није наведен у позиву",
+      "izvor": "Пореска управа",
+      "izvor_pun": "Пореска управа Републике Србије",
+      "link": "https://www.purs.gov.rs/fizicka-lica/pdv/spisak-dobara-sa-stopom-oporezivanja.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>ДЕТАЉАН ВОДИЧ: Пореска управа</strong><br>- <strong>1. Намена:</strong> Провера пореских рокова, олакшица, повраћаја и евиденције.<br>- <strong>2. Провера:</strong> Прочитати званично обавештење на линку и проверити примену на ПИБ / еПорези.<br>- <strong>3. Примена:</strong> Ускладити пријаве, рокове и уплате са важећим прописима.",
+      "obrasci": [
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/pravna-lica/pdv/refakcija-pdv/obrasci.html"
+        },
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/nerezidenti/pdv/refakcija-pdv/Obrasci.html"
+        }
+      ]
+    },
+    {
+      "naslov": "Обавештења за пољопривреднике",
+      "srz_subvencije": "пореско обавештење / олакшице и рокови",
+      "rokovi": "Рок није наведен у позиву",
+      "izvor": "Пореска управа",
+      "izvor_pun": "Пореска управа Републике Србије",
+      "link": "https://www.purs.gov.rs/fizicka-lica/obavestenja.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>ДЕТАЉАН ВОДИЧ: Пореска управа</strong><br>- <strong>1. Намена:</strong> Провера пореских рокова, олакшица, повраћаја и евиденције.<br>- <strong>2. Провера:</strong> Прочитати званично обавештење на линку и проверити примену на ПИБ / еПорези.<br>- <strong>3. Примена:</strong> Ускладити пријаве, рокове и уплате са важећим прописима.",
+      "obrasci": [
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/pravna-lica/pdv/refakcija-pdv/obrasci.html"
+        },
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/nerezidenti/pdv/refakcija-pdv/Obrasci.html"
+        }
+      ]
+    },
+    {
+      "naslov": "Kалкулатор пореза на закуп",
+      "srz_subvencije": "пореско обавештење / олакшице и рокови",
+      "rokovi": "Рок није наведен у позиву",
+      "izvor": "Пореска управа",
+      "izvor_pun": "Пореска управа Републике Србије",
+      "link": "https://www.purs.gov.rs/fizicka-lica/kalkulator-za-obracun-poreza-na-prihod-od-nepokretnosti.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>ДЕТАЉАН ВОДИЧ: Пореска управа</strong><br>- <strong>1. Намена:</strong> Провера пореских рокова, олакшица, повраћаја и евиденције.<br>- <strong>2. Провера:</strong> Прочитати званично обавештење на линку и проверити примену на ПИБ / еПорези.<br>- <strong>3. Примена:</strong> Ускладити пријаве, рокове и уплате са важећим прописима.",
+      "obrasci": [
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/pravna-lica/pdv/refakcija-pdv/obrasci.html"
+        },
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/nerezidenti/pdv/refakcija-pdv/Obrasci.html"
+        }
+      ]
+    },
+    {
+      "naslov": "Регистар одобрених елемената електронског фискалног уређаја",
+      "srz_subvencije": "пореско обавештење / олакшице и рокови",
+      "rokovi": "Рок није наведен у позиву",
+      "izvor": "Пореска управа",
+      "izvor_pun": "Пореска управа Републике Србије",
+      "link": "https://www.purs.gov.rs/eFiskalizacija/registar-odobrenih-elemenata-efu.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>ДЕТАЉАН ВОДИЧ: Пореска управа</strong><br>- <strong>1. Намена:</strong> Провера пореских рокова, олакшица, повраћаја и евиденције.<br>- <strong>2. Провера:</strong> Прочитати званично обавештење на линку и проверити примену на ПИБ / еПорези.<br>- <strong>3. Примена:</strong> Ускладити пријаве, рокове и уплате са важећим прописима.",
+      "obrasci": [
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/pravna-lica/pdv/refakcija-pdv/obrasci.html"
+        },
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/nerezidenti/pdv/refakcija-pdv/Obrasci.html"
+        }
+      ]
+    },
+    {
+      "naslov": "Пријавите неправилности у вези са издавањем фискалних рачуна",
+      "srz_subvencije": "пореско обавештење / олакшице и рокови",
+      "rokovi": "Рок није наведен у позиву",
+      "izvor": "Пореска управа",
+      "izvor_pun": "Пореска управа Републике Србије",
+      "link": "https://www.purs.gov.rs/eFiskalizacija/prijavite-poreske-nepravilnosti.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>ДЕТАЉАН ВОДИЧ: Пореска управа</strong><br>- <strong>1. Намена:</strong> Провера пореских рокова, олакшица, повраћаја и евиденције.<br>- <strong>2. Провера:</strong> Прочитати званично обавештење на линку и проверити примену на ПИБ / еПорези.<br>- <strong>3. Примена:</strong> Ускладити пријаве, рокове и уплате са важећим прописима.",
+      "obrasci": [
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/pravna-lica/pdv/refakcija-pdv/obrasci.html"
+        },
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/nerezidenti/pdv/refakcija-pdv/Obrasci.html"
+        }
+      ]
+    },
+    {
+      "naslov": "Буди еФискализован",
+      "srz_subvencije": "пореско обавештење / олакшице и рокови",
+      "rokovi": "Рок није наведен у позиву",
+      "izvor": "Пореска управа",
+      "izvor_pun": "Пореска управа Републике Србије",
+      "link": "https://www.purs.gov.rs/eFiskalizacija/budi-efiskalizovan.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>ДЕТАЉАН ВОДИЧ: Пореска управа</strong><br>- <strong>1. Намена:</strong> Провера пореских рокова, олакшица, повраћаја и евиденције.<br>- <strong>2. Провера:</strong> Прочитати званично обавештење на линку и проверити примену на ПИБ / еПорези.<br>- <strong>3. Примена:</strong> Ускладити пријаве, рокове и уплате са важећим прописима.",
+      "obrasci": [
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/pravna-lica/pdv/refakcija-pdv/obrasci.html"
+        },
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/nerezidenti/pdv/refakcija-pdv/Obrasci.html"
+        }
+      ]
+    },
+    {
+      "naslov": "Апликација еПорези",
+      "srz_subvencije": "пореско обавештење / олакшице и рокови",
+      "rokovi": "Рок није наведен у позиву",
+      "izvor": "Пореска управа",
+      "izvor_pun": "Пореска управа Републике Србије",
+      "link": "https://www.purs.gov.rs/e-porezi/aplikacija-eporezi.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>ДЕТАЉАН ВОДИЧ: Пореска управа</strong><br>- <strong>1. Намена:</strong> Провера пореских рокова, олакшица, повраћаја и евиденције.<br>- <strong>2. Провера:</strong> Прочитати званично обавештење на линку и проверити примену на ПИБ / еПорези.<br>- <strong>3. Примена:</strong> Ускладити пријаве, рокове и уплате са важећим прописима.",
+      "obrasci": [
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/pravna-lica/pdv/refakcija-pdv/obrasci.html"
+        },
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/nerezidenti/pdv/refakcija-pdv/Obrasci.html"
+        }
+      ]
+    },
+    {
+      "naslov": "Програм \"Фискалис\"",
+      "srz_subvencije": "пореско обавештење / олакшице и рокови",
+      "rokovi": "Рок није наведен у позиву",
+      "izvor": "Пореска управа",
+      "izvor_pun": "Пореска управа Републике Србије",
+      "link": "https://www.purs.gov.rs/o-nama/medjunarodna-saradnja/FISCALIS.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>ДЕТАЉАН ВОДИЧ: Пореска управа</strong><br>- <strong>1. Намена:</strong> Провера пореских рокова, олакшица, повраћаја и евиденције.<br>- <strong>2. Провера:</strong> Прочитати званично обавештење на линку и проверити примену на ПИБ / еПорези.<br>- <strong>3. Примена:</strong> Ускладити пријаве, рокове и уплате са важећим прописима.",
+      "obrasci": [
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/pravna-lica/pdv/refakcija-pdv/obrasci.html"
+        },
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/nerezidenti/pdv/refakcija-pdv/Obrasci.html"
+        }
+      ]
+    },
+    {
+      "naslov": "Уговори о избегавању двоструког опорезивања",
+      "srz_subvencije": "пореско обавештење / олакшице и рокови",
+      "rokovi": "Рок није наведен у позиву",
+      "izvor": "Пореска управа",
+      "izvor_pun": "Пореска управа Републике Србије",
+      "link": "https://www.purs.gov.rs/o-nama/medjunarodna-saradnja/Ugovori.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>ДЕТАЉАН ВОДИЧ: Пореска управа</strong><br>- <strong>1. Намена:</strong> Провера пореских рокова, олакшица, повраћаја и евиденције.<br>- <strong>2. Провера:</strong> Прочитати званично обавештење на линку и проверити примену на ПИБ / еПорези.<br>- <strong>3. Примена:</strong> Ускладити пријаве, рокове и уплате са важећим прописима.",
+      "obrasci": [
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/pravna-lica/pdv/refakcija-pdv/obrasci.html"
+        },
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/nerezidenti/pdv/refakcija-pdv/Obrasci.html"
+        }
+      ]
+    },
+    {
+      "naslov": "Адресар - Ваш порезник",
+      "srz_subvencije": "пореско обавештење / олакшице и рокови",
+      "rokovi": "Рок није наведен у позиву",
+      "izvor": "Пореска управа",
+      "izvor_pun": "Пореска управа Републике Србије",
+      "link": "https://www.purs.gov.rs/vas-poreznik/adresar.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>ДЕТАЉАН ВОДИЧ: Пореска управа</strong><br>- <strong>1. Намена:</strong> Провера пореских рокова, олакшица, повраћаја и евиденције.<br>- <strong>2. Провера:</strong> Прочитати званично обавештење на линку и проверити примену на ПИБ / еПорези.<br>- <strong>3. Примена:</strong> Ускладити пријаве, рокове и уплате са важећим прописима.",
+      "obrasci": [
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/pravna-lica/pdv/refakcija-pdv/obrasci.html"
+        },
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/nerezidenti/pdv/refakcija-pdv/Obrasci.html"
+        }
+      ]
+    },
+    {
+      "naslov": "е-Фискализација",
+      "srz_subvencije": "пореско обавештење / олакшице и рокови",
+      "rokovi": "Рок није наведен у позиву",
+      "izvor": "Пореска управа",
+      "izvor_pun": "Пореска управа Републике Србије",
+      "link": "https://www.purs.gov.rs/CVPO/obrasci/efiskalizacija.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>ДЕТАЉАН ВОДИЧ: Пореска управа</strong><br>- <strong>1. Намена:</strong> Провера пореских рокова, олакшица, повраћаја и евиденције.<br>- <strong>2. Провера:</strong> Прочитати званично обавештење на линку и проверити примену на ПИБ / еПорези.<br>- <strong>3. Примена:</strong> Ускладити пријаве, рокове и уплате са важећим прописима.",
+      "obrasci": [
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/pravna-lica/pdv/refakcija-pdv/obrasci.html"
+        },
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/nerezidenti/pdv/refakcija-pdv/Obrasci.html"
+        }
+      ]
+    },
+    {
+      "naslov": "Порез на добит правних лица",
+      "srz_subvencije": "пореско обавештење / олакшице и рокови",
+      "rokovi": "Рок није наведен у позиву",
+      "izvor": "Пореска управа",
+      "izvor_pun": "Пореска управа Републике Србије",
+      "link": "https://www.purs.gov.rs/CVPO/obrasci/porez-na-dobit-pravnih-lica.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>ДЕТАЉАН ВОДИЧ: Пореска управа</strong><br>- <strong>1. Намена:</strong> Провера пореских рокова, олакшица, повраћаја и евиденције.<br>- <strong>2. Провера:</strong> Прочитати званично обавештење на линку и проверити примену на ПИБ / еПорези.<br>- <strong>3. Примена:</strong> Ускладити пријаве, рокове и уплате са важећим прописима.",
+      "obrasci": [
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/pravna-lica/pdv/refakcija-pdv/obrasci.html"
+        },
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/nerezidenti/pdv/refakcija-pdv/Obrasci.html"
+        }
+      ]
+    },
+    {
+      "naslov": "Порез на доходак",
+      "srz_subvencije": "пореско обавештење / олакшице и рокови",
+      "rokovi": "Рок није наведен у позиву",
+      "izvor": "Пореска управа",
+      "izvor_pun": "Пореска управа Републике Србије",
+      "link": "https://www.purs.gov.rs/CVPO/obrasci/porez-na-dohodak.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>ДЕТАЉАН ВОДИЧ: Пореска управа</strong><br>- <strong>1. Намена:</strong> Провера пореских рокова, олакшица, повраћаја и евиденције.<br>- <strong>2. Провера:</strong> Прочитати званично обавештење на линку и проверити примену на ПИБ / еПорези.<br>- <strong>3. Примена:</strong> Ускладити пријаве, рокове и уплате са важећим прописима.",
+      "obrasci": [
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/pravna-lica/pdv/refakcija-pdv/obrasci.html"
+        },
+        {
+          "naziv": "Образац",
+          "url": "https://www.purs.gov.rs/nerezidenti/pdv/refakcija-pdv/Obrasci.html"
+        }
+      ]
+    },
+    {
+      "naslov": "Калкулатор паушалног пореза и доприноса",
+      "srz_subvencije": "пореско обавештење / олакшице и рокови",
+      "rokovi": "Рок није наведен у позиву",
+      "izvor": "Пореска управа",
+      "izvor_pun": "Пореска управа Републике Србије",
+      "link": "https://eporezi.purs.gov.rs/kalkulator-pausalnog-poreza-i-doprinosa.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>ДЕТАЉАН ВОДИЧ: Пореска управа</strong><br>- <strong>1. Намена:</strong> Провера пореских рокова, олакшица, повраћаја и евиденције.<br>- <strong>2. Провера:</strong> Прочитати званично обавештење на линку и проверити примену на ПИБ / еПорези.<br>- <strong>3. Примена:</strong> Ускладити пријаве, рокове и уплате са важећим прописима.",
+      "obrasci": []
+    },
+    {
+      "naslov": "Економске мере за помоћ привреди и грађанима",
+      "srz_subvencije": "фискални и буџетски прописи / подстицаји",
+      "rokovi": "Рок није наведен у позиву",
+      "izvor": "Министарство финансија",
+      "izvor_pun": "Министарство финансија РС",
+      "link": "https://www.mfin.gov.rs/aktivnosti/ekonomske-mere-za-pomoc-privredi-i-gradjanima",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>ДЕТАЉАН ВОДИЧ: Министарство финансија</strong><br>- <strong>1. Намена:</strong> Фискални прописи, јавни позиви, програми и буџетске мере.<br>- <strong>2. Провера:</strong> Отворити званичну објаву и проверити ко је корисник и до кад важи рок.<br>- <strong>3. Примена:</strong> Ускладити пословну документацију и услове конкурса са објављеним актом.",
+      "obrasci": [
+        {
+          "naziv": "lZim5s_610275a9abed8.docx",
+          "url": "https://www.mfin.gov.rs//upload/media/lZim5s_610275a9abed8.docx"
+        },
+        {
+          "naziv": "1Y8XDS_6017ee8ceacf4.pdf",
+          "url": "https://www.mfin.gov.rs//upload/media/1Y8XDS_6017ee8ceacf4.pdf"
+        },
+        {
+          "naziv": "PMduOB_61a08efef07f3.docx",
+          "url": "https://www.mfin.gov.rs//upload/media/PMduOB_61a08efef07f3.docx"
+        },
+        {
+          "naziv": "F1npVm_6017ee7032612.docx",
+          "url": "https://www.mfin.gov.rs//upload/media/F1npVm_6017ee7032612.docx"
+        },
+        {
+          "naziv": "gDF2hd_6017ee5a93bda.docx",
+          "url": "https://www.mfin.gov.rs//upload/media/gDF2hd_6017ee5a93bda.docx"
+        },
+        {
+          "naziv": "FWqFs9_6017e7c4005c2.pdf",
+          "url": "https://www.mfin.gov.rs//upload/media/FWqFs9_6017e7c4005c2.pdf"
+        }
+      ]
+    },
+    {
+      "naslov": "СЕФ радионица о прелиминарној пореској пријави пореза на додату вредност – одговори на питања корисника",
+      "srz_subvencije": "фискални и буџетски прописи / подстицаји",
+      "rokovi": "Рок није наведен у позиву",
+      "izvor": "Министарство финансија",
+      "izvor_pun": "Министарство финансија РС",
+      "link": "https://www.mfin.gov.rs/aktivnosti/sef-radionica-o-preliminarnoj-poreskoj-prijavi-poreza-na-dodatu-vrednost-odgovori-na-pitanja-korisnika",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>ДЕТАЉАН ВОДИЧ: Министарство финансија</strong><br>- <strong>1. Намена:</strong> Фискални прописи, јавни позиви, програми и буџетске мере.<br>- <strong>2. Провера:</strong> Отворити званичну објаву и проверити ко је корисник и до кад важи рок.<br>- <strong>3. Примена:</strong> Ускладити пословну документацију и услове конкурса са објављеним актом.",
+      "obrasci": []
     },
     {
       "naslov": "Министарство привреде и Фонд за развој, обавештавају све заинтересоване да се продужавају јавни позиви по појединим програмима",
