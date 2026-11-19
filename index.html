@@ -97,6 +97,33 @@
         button:hover {
             background-color: #1d4ed8;
         }
+        .tabs-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 14px 0 18px 0;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        .tab-btn {
+            background-color: #eff6ff;
+            color: var(--primary);
+            border: 1px solid #bfdbfe;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .tab-btn:hover {
+            background-color: #dbeafe;
+            color: var(--primary);
+        }
+        .tab-btn.active {
+            background-color: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+        }
         .konkurs-item {
             padding: 16px 0;
             border-bottom: 1px solid var(--border);
@@ -170,7 +197,7 @@
             margin: 10px 0;
         }
         .static-list li {
-            margin-bottom: 6px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -211,23 +238,120 @@
     </div>
 
     <div class="card">
-        <h2>Актуелни конкурси и позиви (Главни извори)</h2>
+        <h2>Преглед субвенција и олакшица по нивоима</h2>
+        <div id="tabs-bar" class="tabs-bar"></div>
         <div id="konkursi-list">
             <p>Учитавање актуелних конкурса...</p>
         </div>
     </div>
-
-    <div class="card">
-        <h2>Стабилне пореске олакшице и олакшице за запошљавање</h2>
-        <ul class="static-list">
-            <li><strong>Олакшице за новозапослене раднике:</strong> Повратак дела пореза и доприноса за лица која се запошљавају у складу са Законом о порезу на доходак грађана.</li>
-            <li><strong>Самозапошљавање преко НСЗ:</strong> Једнократна бескуматна средства за покретање сопственог бизниса.</li>
-            <li><strong>Фонд за развој:</strong> Програми подршке за почетнике у пословању и набавку производне опреме.</li>
-        </ul>
-    </div>
 </div>
 
 <script>
+    const TAB_DEFINICIJE = [
+        { id: "Све", naziv: "Све" },
+        { id: "Фонд за развој", naziv: "Фонд за развој" },
+        { id: "Министарство привреде", naziv: "Министарство привреде" },
+        { id: "Град Београд", naziv: "Град Београд" },
+        { id: "НСЗ", naziv: "НСЗ" },
+        { id: "Пореске олакшице", naziv: "Пореске олакшице" }
+    ];
+
+    let sviKonkursi = [];
+    let aktivanTab = "Све";
+
+    function prikaziTabove() {
+        const bar = document.getElementById("tabs-bar");
+        bar.innerHTML = TAB_DEFINICIJE.map(tab => {
+            let broj = 0;
+            if (tab.id === "Све") {
+                broj = sviKonkursi.length;
+            } else if (tab.id === "Пореске олакшице") {
+                broj = 3;
+            } else {
+                broj = sviKonkursi.filter(k => k.izvor === tab.id).length;
+            }
+
+            const klasa = aktivanTab === tab.id ? "tab-btn active" : "tab-btn";
+            return `<button type="button" class="${klasa}" onclick="izaberiTab('${tab.id}')">${tab.naziv} (${broj})</button>`;
+        }).join("");
+    }
+
+    function izaberiTab(tabId) {
+        aktivanTab = tabId;
+        prikaziTabove();
+        prikaziSadrzajTaba();
+    }
+
+    function prikaziPoreskeOlaksice() {
+        return `
+            <ul class="static-list">
+                <li><strong>Олакшице за новозапослене раднике:</strong> Повратак дела пореза и доприноса за лица која се запошљавају у складу са Законом о порезу на доходак грађана (услови и рокови прописани законом и актима Пореске управе).</li>
+                <li><strong>Самозапошљавање преко НСЗ:</strong> Једнократна средства за покретање сопственог бизниса uz претходну обуку и евиденцију у НСЗ.</li>
+                <li><strong>Фонд за развој:</strong> Програми подршке за почетнике у пословању и набавку опреме (комбинација гранта и кредита према важећем програму).</li>
+            </ul>
+        `;
+    }
+
+    function prikaziSadrzajTaba() {
+        const listaDiv = document.getElementById("konkursi-list");
+
+        if (aktivanTab === "Пореске олакшице") {
+            listaDiv.innerHTML = prikaziPoreskeOlaksice();
+            return;
+        }
+
+        const filtrirani = aktivanTab === "Све"
+            ? sviKonkursi
+            : sviKonkursi.filter(k => k.izvor === aktivanTab);
+
+        if (!filtrirani || filtrirani.length === 0) {
+            listaDiv.innerHTML = `<p>Тренутно нема пронађених активних конкурса у категорији „${aktivanTab}“.</p>`;
+            return;
+        }
+
+        let html = "";
+        filtrirani.forEach((k) => {
+            let srzTekst = k.srz_subvencije && k.srz_subvencije.trim() !== "" ?
+                `<div class="srz-subvencije">(${k.srz_subvencije})</div>` : "";
+
+            let detaljiSadrzaj = k.detalji && k.detalji.trim() !== "" ?
+                `<div class="detalji-sadrzaj">${k.detalji}</div>` :
+                `<div class="detalji-sadrzaj"><em>За овај конкурс још увек нису унети детаљи.</em></div>`;
+
+            let obrasciHtml = "";
+            if (Array.isArray(k.obrasci) && k.obrasci.length > 0) {
+                let stavke = k.obrasci.map(o =>
+                    `<li><a href="${o.url}" target="_blank" rel="noopener noreferrer">${o.naziv}</a></li>`
+                ).join("");
+                obrasciHtml = `
+                    <div class="obrasci-box">
+                        <strong>📎 Пронађени обрасци и документација:</strong>
+                        <ul>${stavke}</ul>
+                    </div>
+                `;
+            } else {
+                obrasciHtml = `
+                    <div class="obrasci-box">
+                        <strong>📎 Обрасци и документација:</strong> Директни фајлови нису издвојени на подстраници — провери званичну објаву на <a href="${k.link}" target="_blank" rel="noopener noreferrer">страници конкурса</a>.
+                    </div>
+                `;
+            }
+
+            html += `
+                <div class="konkurs-item">
+                    <span class="badge">${k.izvor}</span>
+                    <div class="konkurs-title"><a href="${k.link}" target="_blank" rel="noopener noreferrer">${k.naslov}</a></div>
+                    ${srzTekst}
+                    <div class="meta-info">Пронађено: ${k.datum_pronalaska} | Извор: ${k.izvor_pun}</div>
+                    ${detaljiSadrzaj}
+                    ${obrasciHtml}
+                </div>
+            `;
+        });
+
+        listaDiv.innerHTML = html;
+    }
+
     async function ucitajPodatke() {
         try {
             let response = await fetch('podaci.json?' + new Date().getTime());
@@ -235,53 +359,10 @@
             let data = await response.json();
 
             document.getElementById('last-update').innerText = "Последње ажурирање: " + (data.poslednje_azuriranje || "Непознато");
+            sviKonkursi = Array.isArray(data.konkursi) ? data.konkursi : [];
 
-            let listaDiv = document.getElementById('konkursi-list');
-            if (!data.konkursi || data.konkursi.length === 0) {
-                listaDiv.innerHTML = "<p>Тренутно нема пронађених активних конкурса.</p>";
-                return;
-            }
-
-            let html = "";
-            data.konkursi.forEach((k) => {
-                let srzTekst = k.srz_subvencije && k.srz_subvencije.trim() !== "" ?
-                    `<div class="srz-subvencije">(${k.srz_subvencije})</div>` : "";
-
-                let detaljiSadrzaj = k.detalji && k.detalji.trim() !== "" ? 
-                    `<div class="detalji-sadrzaj">${k.detalji}</div>` : 
-                    `<div class="detalji-sadrzaj"><em>За овај конкурс још увек нису унети детаљи.</em></div>`;
-
-                let obrasciHtml = "";
-                if (Array.isArray(k.obrasci) && k.obrasci.length > 0) {
-                    let stavke = k.obrasci.map(o =>
-                        `<li><a href="${o.url}" target="_blank" rel="noopener noreferrer">${o.naziv}</a></li>`
-                    ).join("");
-                    obrasciHtml = `
-                        <div class="obrasci-box">
-                            <strong>📎 Пронађени обрасци и документација:</strong>
-                            <ul>${stavke}</ul>
-                        </div>
-                    `;
-                } else {
-                    obrasciHtml = `
-                        <div class="obrasci-box">
-                            <strong>📎 Обрасци и документација:</strong> Директни фајлови нису издвојени на подстраници — провери званичну објаву на <a href="${k.link}" target="_blank" rel="noopener noreferrer">страници конкурса</a>.
-                        </div>
-                    `;
-                }
-
-                html += `
-                    <div class="konkurs-item">
-                        <span class="badge">${k.izvor}</span>
-                        <div class="konkurs-title"><a href="${k.link}" target="_blank" rel="noopener noreferrer">${k.naslov}</a></div>
-                        ${srzTekst}
-                        <div class="meta-info">Пронађено: ${k.datum_pronalaska} | Извор: ${k.izvor_pun}</div>
-                        ${detaljiSadrzaj}
-                        ${obrasciHtml}
-                    </div>
-                `;
-            });
-            listaDiv.innerHTML = html;
+            prikaziTabove();
+            prikaziSadrzajTaba();
         } catch (e) {
             document.getElementById('konkursi-list').innerHTML = "<p style='color: red;'>Грешка при учитавању података.</p>";
         }
