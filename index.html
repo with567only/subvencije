@@ -142,6 +142,29 @@
             border-radius: 0 6px 6px 0;
             font-size: 0.9rem;
         }
+        .obrasci-box {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 6px;
+            padding: 10px 14px;
+            margin-top: 8px;
+            font-size: 0.88rem;
+        }
+        .obrasci-box ul {
+            margin: 6px 0 0 0;
+            padding-left: 18px;
+        }
+        .obrasci-box li {
+            margin-bottom: 4px;
+        }
+        .obrasci-box a {
+            color: #1d4ed8;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .obrasci-box a:hover {
+            text-decoration: underline;
+        }
         .static-list {
             padding-left: 20px;
             margin: 10px 0;
@@ -228,13 +251,33 @@
                     `<div class="detalji-sadrzaj">${k.detalji}</div>` : 
                     `<div class="detalji-sadrzaj"><em>За овај конкурс још увек нису унети детаљи.</em></div>`;
 
+                let obrasciHtml = "";
+                if (Array.isArray(k.obrasci) && k.obrasci.length > 0) {
+                    let stavke = k.obrasci.map(o =>
+                        `<li><a href="${o.url}" target="_blank" rel="noopener noreferrer">${o.naziv}</a></li>`
+                    ).join("");
+                    obrasciHtml = `
+                        <div class="obrasci-box">
+                            <strong>📎 Пронађени обрасци и документација:</strong>
+                            <ul>${stavke}</ul>
+                        </div>
+                    `;
+                } else {
+                    obrasciHtml = `
+                        <div class="obrasci-box">
+                            <strong>📎 Обрасци и документација:</strong> Директни фајлови нису издвојени на подстраници — провери званичну објаву на <a href="${k.link}" target="_blank" rel="noopener noreferrer">страници конкурса</a>.
+                        </div>
+                    `;
+                }
+
                 html += `
                     <div class="konkurs-item">
                         <span class="badge">${k.izvor}</span>
-                        <div class="konkurs-title"><a href="${k.link}" target="_blank">${k.naslov}</a></div>
+                        <div class="konkurs-title"><a href="${k.link}" target="_blank" rel="noopener noreferrer">${k.naslov}</a></div>
                         ${srzTekst}
                         <div class="meta-info">Пронађено: ${k.datum_pronalaska} | Извор: ${k.izvor_pun}</div>
                         ${detaljiSadrzaj}
+                        ${obrasciHtml}
                     </div>
                 `;
             });
