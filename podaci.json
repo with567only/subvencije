@@ -1,83 +1,101 @@
 {
-  "poslednje_azuriranje": "19.11.2026. у 13:19",
+  "poslednje_azuriranje": "19.11.2026. у 13:29",
   "status_izvora": {
     "НСЗ": "ОК (нових: 0)",
     "Фонд за развој": "ОК (нових: 0)",
-    "Град Београд": "ОК (нових: 0)",
-    "Министарство привреде": "ОК (нових: 0)"
+    "Град Београд": "ОК (нових: 6)",
+    "Министарство привреде": "ОК (нових: 4)"
   },
   "konkursi": [
     {
-      "naslov": "Агенције за запошљавање",
-      "izvor": "НСЗ",
-      "izvor_pun": "Национална служба за запошљавање (НСЗ)",
-      "link": "https://www.nsz.gov.rs/live/nudite-posao/agencije-za-posredovanje-u-zaposljavanju.cid170",
-      "datum_pronalaska": "2026-11-18",
-      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Субвенције за запошљавање нових радника</strong><br>• <strong>1. Услови за послодавца:</strong> Редовна исплата зарада, задржавање новозапосленог лица на истом радном месту најмање 12 месеци.<br>• <strong>2. Потребна документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Захтев за доделу субвенције за запошљавање.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Централног регистра обавезног социјалног осигурања (CROSO) о броју запослених.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Доказ да послодавац нема неизмирених обавеза по основу пореза и доприноса.",
-      "srz_subvencije": "субвенција по запосленом / олакшице пореза и доприноса"
-    },
-    {
-      "naslov": "Испит - Запошљавање",
-      "izvor": "НСЗ",
-      "izvor_pun": "Национална служба за запошљавање (НСЗ)",
-      "link": "https://www.minrzs.gov.rs/sr/dokumenti/dokumenti/ispit-zaposljavanje",
-      "datum_pronalaska": "2026-11-18",
-      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Субвенције за запошљавање нових радника</strong><br>• <strong>1. Услови за послодавца:</strong> Редовна исплата зарада, задржавање новозапосленог лица на истом радном месту најмање 12 месеци.<br>• <strong>2. Потребна документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Захтев за доделу субвенције за запошљавање.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Централног регистра обавезног социјалног осигурања (CROSO) о броју запослених.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Доказ да послодавац нема неизмирених обавеза по основу пореза и доприноса.",
-      "srz_subvencije": "субвенција по запосленом / олакшице пореза и доприноса"
-    },
-    {
-      "naslov": "Градски огласи, конкурси и тендери",
+      "naslov": "Обавештење Секретаријата за пољопривреду Секретаријат за пољопривреду 28.10.2026.",
+      "srz_subvencije": "градска субвенција за привреду",
       "izvor": "Град Београд",
       "izvor_pun": "Град Београд - Огласи и конкурси",
-      "link": "https://www.beograd.rs/cir/gradski-oglasi",
-      "datum_pronalaska": "2026-11-18",
-      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама.",
-      "srz_subvencije": "локална субвенција Града Београда (износ дефинисан позивом)"
+      "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116410/Obavestenje-Sekretarijata-za-poljoprivredu.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама."
     },
     {
-      "naslov": "Конкурс за доделу 150 стипендија ученицима средњих школа и студентима високошколских установа у Београду за 20206.годину Секретаријат за образовање и дечју заштиту 17.11.2026.",
+      "naslov": "Коначна ранг-листа о додели подстицајних средстава у области сточарства на територији града Београда за 2026. годину Секретаријат за пољопривреду 16.10.2026.",
+      "srz_subvencije": "градска субвенција за привреду",
       "izvor": "Град Београд",
       "izvor_pun": "Град Београд - Огласи и конкурси",
-      "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116666/Konkurs-za-dodelu-150-stipendija-ucenicima-srednjih-skola-i-studentima-visokoskolskih-ustanova-u-Beogradu-za-20206.godinu.html",
-      "datum_pronalaska": "2026-11-18",
-      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама.",
-      "srz_subvencije": "локална субвенција Града Београда (износ дефинисан позивом)"
+      "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116256/Konacna-rang-lista-o-dodeli-podsticajnih-sredstava-u-oblasti-stocarstva-na-teritoriji-grada-Beograda-za-2026.-godinu.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама."
     },
     {
-      "naslov": "Конкурс за доделу 65 стипендија ученицима са инвалидитетом средњих школа и студентима са инвалидитетом високошколских установа у Београду за 2026. годину Секретаријат за образовање и дечју заштиту 17.11.2026.",
+      "naslov": "Коначна ранг-листа о додели подстицајних средстава у области воћарства, повртарства и ратарства на територији града Београда за 2026. годину Секретаријат за пољопривреду 16.10.2026.",
+      "srz_subvencije": "градска субвенција за привреду",
       "izvor": "Град Београд",
       "izvor_pun": "Град Београд - Огласи и конкурси",
-      "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116664/Konkurs-za-dodelu-65-stipendija-ucenicima-sa-invaliditetom-srednjih-skola-i-studentima-sa-invaliditetom-visokoskolskih-ustanova-u-Beogradu-za-2026.-godinu.html",
-      "datum_pronalaska": "2026-11-18",
-      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама.",
-      "srz_subvencije": "локална субвенција Града Београда (износ дефинисан позивом)"
+      "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116257/Konacna-rang-lista-o-dodeli-podsticajnih-sredstava-u-oblasti-vocarstva-povrtarstva-i-ratarstva-na-teritoriji-grada-Beograda-za-2026.-godinu.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама."
     },
     {
-      "naslov": "Списак кандидата који испуњавају услове да учествују у изборним радњама на Jавном конкурсу за попуњавање радних места службеника Градска управа града Београда 16.11.2026.",
+      "naslov": "Коначна ранг-листа о додели подстицајних средстава у области пчеларства на територији града Београда за 2026. годину Секретаријат за пољопривреду 16.10.2026.",
+      "srz_subvencije": "градска субвенција за привреду",
       "izvor": "Град Београд",
       "izvor_pun": "Град Београд - Огласи и конкурси",
-      "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116662/Spisak-kandidata-koji-ispunjavaju-uslove-da-ucestvuju-u-izbornim-radnjama-na-Javnom-konkursu-za-popunjavanje-radnih-mesta-sluzbenika.html",
-      "datum_pronalaska": "2026-11-18",
-      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама.",
-      "srz_subvencije": "локална субвенција Града Београда (износ дефинисан позивом)"
+      "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116258/Konacna-rang-lista-o-dodeli-podsticajnih-sredstava-u-oblasti-pcelarstva-na-teritoriji-grada-Beograda-za-2026.-godinu.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама."
     },
     {
-      "naslov": "Списак кандидата који испуњавају услове да учествују у изборним радњама на Jавном конкурсу за попуњавање радних места службеника Градска управа града Београда 23.10.2026.",
+      "naslov": "Коначна ранг-листа о додели подстицајних средстава за набавку трактора на територији града Београда за 2026. годину Секретаријат за пољопривреду 16.10.2026.",
+      "srz_subvencije": "градска субвенција за привреду",
       "izvor": "Град Београд",
       "izvor_pun": "Град Београд - Огласи и конкурси",
-      "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116350/Spisak-kandidata-koji-ispunjavaju-uslove-da-ucestvuju-u-izbornim-radnjama-na-Javnom-konkursu-za-popunjavanje-radnih-mesta-sluzbenika.html",
-      "datum_pronalaska": "2026-11-18",
-      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама.",
-      "srz_subvencije": "локална субвенција Града Београда (износ дефинисан позивом)"
+      "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116261/Konacna-rang-lista-o-dodeli-podsticajnih-sredstava-za-nabavku-traktora-na-teritoriji-grada-Beograda-za-2026.-godinu.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама."
     },
     {
-      "naslov": "Јавни конкурс за попуњавање радних места службеника у Градској управи града Београда Градска управа града Београда 22.10.2026.",
+      "naslov": "Коначна ранг-листа о додели подстицајних средстава за набавку пољопривредних прикључних машина на територији града Београда за 2026. годину Секретаријата за пољопривреду 16.10.2026.",
+      "srz_subvencije": "градска субвенција за привреду",
       "izvor": "Град Београд",
       "izvor_pun": "Град Београд - Огласи и конкурси",
-      "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116338/Javni-konkurs-za-popunjavanje-radnih-mesta-sluzbenika-u-Gradskoj-upravi-grada-Beograda.html",
-      "datum_pronalaska": "2026-11-18",
-      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама.",
-      "srz_subvencije": "локална субвенција Града Београда (износ дефинисан позивом)"
+      "link": "https://www.beograd.rs/cir/gradski-oglasi-i-konkursi/a116259/Konacna-rang-lista-o-dodeli-podsticajnih-sredstava-za-nabavku-poljoprivrednih-prikljucnih-masina-na-teritoriji-grada-Beograda-za-2026.-godinu.html",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>• <strong>1. Територијални услов:</strong> Седиште привредног субјекта искључиво на територији београдских општина.<br>• <strong>2. Документација:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- Образац пријаве на јавни конкурс Града Београда.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Извод из АПР-а (важећи статус).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Потврда Пореске управе о измиреним пореским обавезама."
+    },
+    {
+      "naslov": "Министарство привреде Републике Србије",
+      "srz_subvencije": "детаљи и износи у тексту позива",
+      "izvor": "Министарство привреде",
+      "izvor_pun": "Министарство привреде",
+      "link": "https://privreda.gov.rs/",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ — Министарство привреде</strong><br>• <strong>1. Провера административних услова:</strong> Обавезно преузети званични конкурс са линка и проверити рок за подношење пријава.<br>• <strong>2. Стандардни сет докумената:</strong> Решење из АПР-а, потврда Народне банке (НБС) да рачун није у блокади, уверење из Пореске управе."
+    },
+    {
+      "naslov": "Сектор за привредна друштва и привредне регистре",
+      "srz_subvencije": "детаљи и износи у тексту позива",
+      "izvor": "Министарство привреде",
+      "izvor_pun": "Министарство привреде",
+      "link": "https://privreda.gov.rs/ministarstvo/organizaciona-struktura/sektor-za-privredna-drustva-i-registre",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ — Министарство привреде</strong><br>• <strong>1. Провера административних услова:</strong> Обавезно преузети званични конкурс са линка и проверити рок за подношење пријава.<br>• <strong>2. Стандардни сет докумената:</strong> Решење из АПР-а, потврда Народне банке (НБС) да рачун није у блокади, уверење из Пореске управе."
+    },
+    {
+      "naslov": "Потврде о статусу привредног друштава из поступка приватизације",
+      "srz_subvencije": "детаљи и износи у тексту позива",
+      "izvor": "Министарство привреде",
+      "izvor_pun": "Министарство привреде",
+      "link": "https://privreda.gov.rs/usluge/potvrde/potvrde-o-statusu-privrednog-drustva-iz-postupka-privatizacije",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ — Министарство привреде</strong><br>• <strong>1. Провера административних услова:</strong> Обавезно преузети званични конкурс са линка и проверити рок за подношење пријава.<br>• <strong>2. Стандардни сет докумената:</strong> Решење из АПР-а, потврда Народне банке (НБС) да рачун није у блокади, уверење из Пореске управе."
+    },
+    {
+      "naslov": "Уношење назива „Србија“ у име привредног друштва",
+      "srz_subvencije": "детаљи и износи у тексту позива",
+      "izvor": "Министарство привреде",
+      "izvor_pun": "Министарство привреде",
+      "link": "https://privreda.gov.rs/usluge/unosenje-naziva-srbija-u-ime-privrednog-drustva",
+      "datum_pronalaska": "2026-11-19",
+      "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ — Министарство привреде</strong><br>• <strong>1. Провера административних услова:</strong> Обавезно преузети званични конкурс са линка и проверити рок за подношење пријава.<br>• <strong>2. Стандардни сет докумената:</strong> Решење из АПР-а, потврда Народне банке (НБС) да рачун није у блокади, уверење из Пореске управе."
     },
     {
       "naslov": "Сектор за развој малих и средњих предузећа и предузетништва",
@@ -86,7 +104,7 @@
       "link": "https://privreda.gov.rs/ministarstvo/organizaciona-struktura/sektor-za-razvoj-malih-i-srednjih-preduzeca-i-preduzetnistva",
       "datum_pronalaska": "2026-11-18",
       "detalji": "<strong>🎯 ДЕТАЉАН ВОДИЧ — Министарство привреде</strong><br>• <strong>1. Провера административних услова:</strong> Обавезно преузети званични конкурс са линка и проверити рок за подношење пријава.<br>• <strong>2. Стандардни сет докумената:</strong> Решење из АПР-а, потврда Народне банке (НБС) да рачун није у блокади, уверење из Пореске управе.",
-      "srz_subvencije": "проверити тачан износ/проценат у позиву"
+      "srz_subvencije": "99%"
     },
     {
       "naslov": "Министарство привреде и Фонд за развој, обавештавају све заинтересоване да се продужавају јавни позиви по појединим програмима",
