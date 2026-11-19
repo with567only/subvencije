@@ -159,7 +159,29 @@
             font-size: 0.85rem;
             color: var(--text-light);
             margin-top: 4px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
+        }
+        .toggle-btn {
+            background-color: #f1f5f9;
+            color: var(--primary);
+            border: 1px solid #cbd5e1;
+            padding: 6px 12px;
+            font-size: 0.84rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 4px;
+        }
+        .toggle-btn:hover {
+            background-color: #e2e8f0;
+            color: var(--primary);
+        }
+        .detalji-panel {
+            display: none;
+            margin-top: 10px;
+        }
+        .detalji-panel.open {
+            display: block;
         }
         .detalji-sadrzaj {
             background: #f1f5f9;
@@ -282,6 +304,13 @@
         prikaziSadrzajTaba();
     }
 
+    function prebaciDetalje(index, dugme) {
+        const panel = document.getElementById(`detalji-panel-${index}`);
+        if (!panel) return;
+        const otvoren = panel.classList.toggle("open");
+        dugme.innerText = otvoren ? "Сакриј водич и обрасце" : "Прикажи водич и обрасце";
+    }
+
     function prikaziPoreskeOlaksice() {
         return `
             <ul class="static-list">
@@ -310,7 +339,7 @@
         }
 
         let html = "";
-        filtrirani.forEach((k) => {
+        filtrirani.forEach((k, idx) => {
             let srzTekst = k.srz_subvencije && k.srz_subvencije.trim() !== "" ?
                 `<div class="srz-subvencije">(${k.srz_subvencije})</div>` : "";
 
@@ -343,8 +372,11 @@
                     <div class="konkurs-title"><a href="${k.link}" target="_blank" rel="noopener noreferrer">${k.naslov}</a></div>
                     ${srzTekst}
                     <div class="meta-info">Пронађено: ${k.datum_pronalaska} | Извор: ${k.izvor_pun}</div>
-                    ${detaljiSadrzaj}
-                    ${obrasciHtml}
+                    <button type="button" class="toggle-btn" onclick="prebaciDetalje(${idx}, this)">Прикажи водич и обрасце</button>
+                    <div id="detalji-panel-${idx}" class="detalji-panel">
+                        ${detaljiSadrzaj}
+                        ${obrasciHtml}
+                    </div>
                 </div>
             `;
         });
