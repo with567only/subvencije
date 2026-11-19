@@ -155,6 +155,40 @@ def pronadji_brojeve_u_tekstu(tekst):
 
     return pronadjeno[:4]
 
+def izvuci_rokove_i_datume(naslov, soup_stranice=None):
+    datumi_u_naslovu = re.findall(r'\b\d{1,2}\.\d{1,2}\.\d{4}\.?', naslov or "")
+    cisti_naslov_datumi = []
+    for d in datumi_u_naslovu:
+        d_cist = d.rstrip(".") + "."
+        if d_cist not in cisti_naslov_datumi:
+            cisti_naslov_datumi.append(d_cist)
+
+    tekst_stranice = ""
+    if soup_stranice is not None:
+        glavni = soup_stranice.find("main") or soup_stranice.find("article") or soup_stranice.body
+        if glavni:
+            tekst_stranice = ocisti_tekst(glavni.get_text())[:6000]
+
+    rok_mecevi = []
+    if tekst_stranice:
+        for m in re.finditer(
+            r'(?:рок\s+(?:за\s+(?:подношење|пријав)[^.:\n]{0,45}|је\s+до\s+|до\s+)|отворен\s+до\s+|траје\s+до\s+|пријаве\s+до\s+|завршава\s+(?:се\s+)?до\s+)(\d{1,2}\.\d{1,2}\.\d{4}\.?)',
+            tekst_stranice,
+            flags=re.IGNORECASE
+        ):
+            dat = m.group(1).rstrip(".") + "."
+            if dat not in rok_mecevi:
+                rok_mecevi.append(dat)
+
+    if rok_mecevi and cisti_naslov_datumi:
+        return f"Објављено: {cisti_naslov_datumi[0]} | Рок до: {rok_mecevi[0]}"
+    if rok_mecevi:
+        return f"Рок до: {' / '.join(rok_mecevi[:2])}"
+    if cisti_naslov_datumi:
+        return f"Датум у називу: {' / '.join(cisti_naslov_datumi[:2])} (рок проверити у позиву)"
+
+    return "Рок и датум расписивања проверити у тексту позива"
+
 def izvuci_srz_subvencije(naslov, izvor_skraceno, pun_link, soup_stranice=None):
     n = naslov.lower()
     pronadjeno = pronadji_brojeve_u_tekstu(naslov)
@@ -336,6 +370,7 @@ def pokreni_pretragu():
                         soup_stranice = None
 
                 srz = izvuci_srz_subvencije(naslov, izvor["skraceno"], pun_link, soup_stranice)
+                rokovi = izvuci_rokove_i_datume(naslov, soup_stranice)
                 obrasci = izvuci_obrasce_sa_stranice(soup_stranice, izvor["baza_url"], pun_link)
                 detalji = generisi_detaljnu_razradu(naslov, izvor["skraceno"])
 
@@ -343,6 +378,7 @@ def pokreni_pretragu():
                     postojeci_linkovi[pun_link] = {
                         "naslov": naslov,
                         "srz_subvencije": srz,
+                        "rokovi": rokovi,
                         "izvor": izvor["skraceno"],
                         "izvor_pun": izvor["naziv"],
                         "link": pun_link,
@@ -353,6 +389,7 @@ def pokreni_pretragu():
                     pronadjeno_za_izvor += 1
                 else:
                     postojeci_linkovi[pun_link]["srz_subvencije"] = srz
+                    postojeci_linkovi[pun_link]["rokovi"] = rokovi
                     postojeci_linkovi[pun_link]["detalji"] = detalji
                     postojeci_linkovi[pun_link]["obrasci"] = obrasci
 
