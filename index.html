@@ -155,6 +155,12 @@
             font-weight: 600;
             color: #0f172a;
         }
+        .rokovi-info {
+            margin-top: 4px;
+            font-size: 0.86rem;
+            font-weight: 600;
+            color: #1e3a8a;
+        }
         .meta-info {
             font-size: 0.85rem;
             color: var(--text-light);
@@ -343,6 +349,9 @@
             let srzTekst = k.srz_subvencije && k.srz_subvencije.trim() !== "" ?
                 `<div class="srz-subvencije">(${k.srz_subvencije})</div>` : "";
 
+            let rokoviTekst = k.rokovi && k.rokovi.trim() !== "" ?
+                `<div class="rokovi-info">Период / рок: ${k.rokovi}</div>` : "";
+
             let detaljiSadrzaj = k.detalji && k.detalji.trim() !== "" ?
                 `<div class="detalji-sadrzaj">${k.detalji}</div>` :
                 `<div class="detalji-sadrzaj"><em>За овај конкурс још увек нису унети детаљи.</em></div>`;
@@ -371,6 +380,7 @@
                     <span class="badge">${k.izvor}</span>
                     <div class="konkurs-title"><a href="${k.link}" target="_blank" rel="noopener noreferrer">${k.naslov}</a></div>
                     ${srzTekst}
+                    ${rokoviTekst}
                     <div class="meta-info">Пронађено: ${k.datum_pronalaska} | Извор: ${k.izvor_pun}</div>
                     <button type="button" class="toggle-btn" onclick="prebaciDetalje(${idx}, this)">Прикажи водич и обрасце</button>
                     <div id="detalji-panel-${idx}" class="detalji-panel">
