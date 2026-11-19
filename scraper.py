@@ -22,8 +22,22 @@ KLJUCNE_RECI = [
     "микро", "mikro",
     "мала предузећа", "mala preduzeca",
     "старт", "start",
-    "јавни позив", "javni poziv",
-    "конкурс", "konkurs"
+    "бесповратн", "bespovratn",
+    "привред", "privred"
+]
+
+ZABRANJENE_RECI = [
+    "списак кандидата", "spisak kandidata",
+    "стипендиј", "stipendij",
+    "службеника", "sluzbenika",
+    "изборним радњама", "izbornim radnjama",
+    "радног места", "radnog mesta",
+    "радних места", "radnih mesta",
+    "ученицима", "ucenicima",
+    "студентима", "studentima",
+    "испит", "ispit",
+    "агенције за запошљавање", "agencije za zaposljavanje",
+    "намештеника", "namestenika"
 ]
 
 IZVORI = [
@@ -56,40 +70,79 @@ IZVORI = [
 def ocisti_tekst(tekst):
     return re.sub(r'\s+', ' ', tekst).strip()
 
-def odgovara_kljucnim_recima(naslov):
+def odgovara_kljucnim_recima(naslov, izvor_skraceno=""):
     n = naslov.lower()
     if len(n) < 15 or len(n) > 250:
         return False
+    if any(zabr in n for zabr in ZABRANJENE_RECI):
+        return False
+    if izvor_skraceno == "Град Београд":
+        usko_privreda = [
+            "привред", "privred", "предузетни", "preduzetni",
+            "субвенциј", "subvencij", "бесповратн", "bespovratn",
+            "пољопривред", "poljoprivred", "иновациј", "inovacij",
+            "туризм", "turizm", "занат", "zanat"
+        ]
+        return any(rec in n for rec in usko_privreda)
     return any(rec in n for rec in KLJUCNE_RECI)
 
-def izvuci_srz_subvencije(naslov, izvor_skraceno):
-    n = naslov.lower()
-
-    # Прво покушај да извучеш експлицитне проценте или износе из самог наслова
+def pronadji_brojeve_u_tekstu(tekst):
     pronadjeno = []
-    procenti = re.findall(r'\d+\s*%', naslov)
-    iznosi = re.findall(r'(?:до\s*)?\d{1,3}(?:[.,\s]\d{3})*\s*(?:рсд|rsd|дин|динара)', n, flags=re.IGNORECASE)
+    procenti = re.findall(r'\b\d{1,3}(?:[.,]\d+)?\s*%', tekst)
+    iznosi_rsd = re.findall(
+        r'(?:до\s+|од\s+|износи\s+)?\d{1,3}(?:[.,\s]\d{3})+\s*(?:рсд|rsd|динара|дин\.)',
+        tekst,
+        flags=re.IGNORECASE
+    )
+    iznosi_eur = re.findall(
+        r'(?:до\s+|од\s+)?\d{1,3}(?:[.,\s]\d{3})*\s*(?:евра|еур|eur|€)',
+        tekst,
+        flags=re.IGNORECASE
+    )
 
-    if procenti:
-        pronadjeno.append(", ".join(p.replace(" ", "") for p in procenti))
-    if iznosi:
-        pronadjeno.append(", ".join(re.sub(r'\s+', ' ', i).strip() for i in iznosi))
+    for p in procenti:
+        cisto = re.sub(r'\s+', '', p)
+        if cisto not in pronadjeno:
+            pronadjeno.append(cisto)
+    for i in iznosi_rsd + iznosi_eur:
+        cisto = re.sub(r'\s+', ' ', i).strip()
+        if cisto not in pronadjeno:
+            pronadjeno.append(cisto)
+
+    return pronadjeno[:4]
+
+def izvuci_srz_subvencije(naslov, izvor_skraceno, pun_link):
+    n = naslov.lower()
+    pronadjeno = pronadji_brojeve_u_tekstu(naslov)
+
+    # Ако нема бројки у наслову, покушај да учиташ текст саме странице конкурса
+    if not pronadjeno and pun_link.startswith("http") and not pun_link.lower().endswith(".pdf"):
+        try:
+            r = requests.get(pun_link, headers=HEADERS, timeout=12, verify=False)
+            r.encoding = r.apparent_encoding or "utf-8"
+            s = BeautifulSoup(r.text, "html.parser")
+            glavni = s.find("main") or s.find("article") or s.body
+            if glavni:
+                tekst_stranice = ocisti_tekst(glavni.get_text())[:4000]
+                pronadjeno = pronadji_brojeve_u_tekstu(tekst_stranice)
+        except Exception:
+            pass
+
     if pronadjeno:
         return " | ".join(pronadjeno)
 
-    # Ако наслов нема бројке, извуци кључну олакшицу према типу позива
     if "самозапошљавањ" in n or "samozaposljavanj" in n:
-        return "једнократна субвенција за старт (проверити важећи износ позива)"
+        return "једнократна субвенција за старт"
     if "запошљавањ" in n or "zaposljavanj" in n:
-        return "субвенција по запосленом / олакшице пореза и доприноса"
+        return "субвенција / повраћај пореза и доприноса"
     if "опрем" in n or "oprem" in n:
-        return "бесповратна средства + кредит (до вишемилионских износа по позиву)"
+        return "бесповратна средства + повољан кредит"
     if "старт" in n or "start" in n or "почетни" in n or "pocetni" in n:
-        return "старт-ап подршка (грант / повољан кредит)"
+        return "старт-ап грант / повољан кредит"
     if izvor_skraceno == "Град Београд":
-        return "локална субвенција Града Београда (износ дефинисан позивом)"
+        return "градска субвенција за привреду"
 
-    return "проверити тачан износ/проценат у позиву"
+    return "детаљи и износи у тексту позива"
 
 def generisi_detaljnu_razradu(naslov, izvor_skraceno):
     n = naslov.lower()
@@ -160,7 +213,11 @@ def ucitaj_postojece():
 
 def pokreni_pretragu():
     baza = ucitaj_postojece()
-    postojeci_linkovi = {s["link"]: s for s in baza.get("konkursi", [])}
+    # Задржи само постојеће ставке које пролазе нови пооштрени филтер
+    postojeci_linkovi = {
+        s["link"]: s for s in baza.get("konkursi", [])
+        if odgovara_kljucnim_recima(s.get("naslov", ""), s.get("izvor", ""))
+    }
     
     danas = datetime.now().strftime("%Y-%m-%d")
     vreme_sada = datetime.now().strftime("%d.%m.%Y. у %H:%M")
@@ -177,7 +234,7 @@ def pokreni_pretragu():
                 naslov = ocisti_tekst(a.get_text())
                 href = a["href"].strip()
 
-                if not odgovara_kljucnim_recima(naslov):
+                if not odgovara_kljucnim_recima(naslov, izvor["skraceno"]):
                     continue
 
                 if href.startswith("/"):
@@ -190,7 +247,7 @@ def pokreni_pretragu():
                 if pun_link.rstrip("/") == izvor["url"].rstrip("/"):
                     continue
 
-                srz = izvuci_srz_subvencije(naslov, izvor["skraceno"])
+                srz = izvuci_srz_subvencije(naslov, izvor["skraceno"], pun_link)
                 detalji = generisi_detaljnu_razradu(naslov, izvor["skraceno"])
 
                 if pun_link not in postojeci_linkovi:
@@ -205,7 +262,6 @@ def pokreni_pretragu():
                     }
                     pronadjeno_za_izvor += 1
                 else:
-                    # Освежи срж и детаље и за већ постојеће записе
                     postojeci_linkovi[pun_link]["srz_subvencije"] = srz
                     postojeci_linkovi[pun_link]["detalji"] = detalji
 
