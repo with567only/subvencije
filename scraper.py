@@ -229,49 +229,153 @@ def generisi_detaljnu_razradu(naslov, izvor_skraceno):
     n = naslov.lower()
 
     if "самозапошљавањ" in n or "samozaposljavanj" in n:
-        return (
-            "<strong>ДЕТАЉАН ВОДИЧ: Самозапошљавање (НСЗ)</strong><br>"
-            "- <strong>1. Услови за пријаву:</strong> Незапослено лице на евиденцији НСЗ, претходно завршена законска обука за развој предузетништва.<br>"
-            "- <strong>2. Потребна документација и обрасци:</strong><br>"
-            "  * Званичан захтев са бизнис планом (преузима се са сајта НСЗ у форми формулара).<br>"
-            "  * Доказ о завршеној обуци.<br>"
-            "  * Уверење из Пореске управе да су измирене пореске обавезе.<br>"
-            "- <strong>3. Административни кораци:</strong> Подношење комплетне документације филијали НСЗ у предвиђеном року, израда пројекције пословања за прву годину.<br>"
-            "- <strong>4. Главне обавезе након одобравања:</strong> Регистрација радње (паушал или књигаш) у АПР-у, потписивање уговора са НСЗ, обавеза рада и уплате доприноса минимум 12 месеци.<br>"
-            "- <strong>5. Помоћ при попуњавању обрасца:</strong> У бизнис плану ускладити планирану делатност са шифром делатности из пријаве, реално навести трошкове опреме/материјала и први приход; пре предаје проверити да нема заосталих пореских дуговања."
-        )
+        stavke = [
+            "<strong>ДЕТАЉАН ВОДИЧ: Самозапошљавање (НСЗ)</strong>",
+            "- <strong>1. Услови:</strong> Евиденција у НСЗ и завршена обука за предузетништво.",
+            "- <strong>2. Обрасци и докази:</strong> Захтев са бизнис планом, доказ о обуци, пореско уверење.",
+            "- <strong>3. Кораци:</strong> Предаја документације филијали НСЗ у року и план за прву годину.",
+            "- <strong>4. Обавезе:</strong> Регистрација у АПР-у, уговор са НСЗ и рад/доприноси минимум 12 месеци.",
+            "- <strong>5. Попуњавање:</strong> Ускладити шифру делатности, реалне трошкове и први приход; проверити порески дуг."
+        ]
     elif "опрем" in n or "oprem" in n:
-        return (
-            "<strong>ДЕТАЉАН ВОДИЧ: Набавка опреме и машина</strong><br>"
-            "- <strong>1. Облик подршке:</strong> Комбинација бесповратних средстава (грант) и повољног кредита.<br>"
-            "- <strong>2. Обавезна документација и обрасци:</strong><br>"
-            "  * Инвестициони програм / Бизнис план по прописаној шеми Фонда за развој.<br>"
-            "  * Профактура добављача опреме са детаљном техничком спецификацијом.<br>"
-            "  * Финансијски извештаји за претходне године (за постојеће фирме).<br>"
-            "- <strong>3. Средства обезбеђења:</strong> Менице, хипотека или банкарска гаранција у зависности од висине траженог износа кредита/гранта.<br>"
-            "- <strong>4. Помоћ при попуњавању обрасца:</strong> Унети тачан ПИБ, матични број и шифру претежне делатности; износи и називи опреме у програму морају тачно да одговарају профактурама, уз проверу да рачун није у блокади."
-        )
+        stavke = [
+            "<strong>ДЕТАЉАН ВОДИЧ: Набавка опреме и машина</strong>",
+            "- <strong>1. Подршка:</strong> Комбинација бесповратних средстава (грант) и повољног кредита.",
+            "- <strong>2. Обрасци и прилози:</strong> Инвестициони програм/бизнис план, профактуре, финансијски извештаји.",
+            "- <strong>3. Обезбеђење:</strong> Менице, хипотека или банкарска гаранција према висини износа.",
+            "- <strong>4. Попуњавање:</strong> Тачан ПИБ, МБ и шифра делатности; износи у програму морају пратити профактуре."
+        ]
     elif "старт" in n or "start" in n or "почетни" in n or "pocetni" in n:
-        return (
-            "<strong>ДЕТАЉАН ВОДИЧ: Подршка почетницима (Старт-ап)</strong><br>"
-            "- <strong>1. Циљна група:</strong> Предузетници и привредна друштва са кратком историјом пословања (обично до 2 године од дана оснивања).<br>"
-            "- <strong>2. Потребни обрасци и прилози:</strong><br>"
-            "  * Захтев за кредитирање почетника.<br>"
-            "  * Бизнис план са тржишном анализом и пројекцијом прихода.<br>"
-            "  * Докази о власништву или закупу пословног простора.<br>"
-            "- <strong>3. Помоћ при попуњавању обрасца:</strong> Јасно раздвојити сопствено учешће и тражена средства, навести реалне купце/добављаче и обезбедити усклађеност уговора о закупу/власништва са адресом седишта или погона."
-        )
+        stavke = [
+            "<strong>ДЕТАЉАН ВОДИЧ: Подршка почетницима (Старт-ап)</strong>",
+            "- <strong>1. Корисници:</strong> Предузетници и привредна друштва са кратком историјом пословања.",
+            "- <strong>2. Документација:</strong> Захтев за кредитирање, бизнис план, доказ о простору (власништво/закуп).",
+            "- <strong>3. Попуњавање:</strong> Раздвојити сопствено учешће и тражена средства; ускладити адресу и простор."
+        ]
     elif "запошљавањ" in n or "zaposljavanj" in n:
-        return (
-            "<strong>ДЕТАЉАН ВОДИЧ: Субвенције за запошљавање нових радника</strong><br>"
-            "- <strong>1. Услови за послодавца:</strong> Редовна исплата зарада, задржавање новозапосленог лица на истом радном месту најмање 12 месеци.<br>"
-            "- <strong>2. Потребна документација:</strong><br>"
-            "  * Захтев за доделу субвенције за запошљавање.<br>"
-            "  * Потврда Централног регистра обавезног социјалног осигурања (CROSO) о броју запослених.<br>"
-            "  * Доказ да послодавац нема неизмирених обавеза по основу пореза и доприноса.<br>"
-            "- <strong>3. Помоћ при попуњавању обрасца:</strong> Проверити постојећи број радника на CROSO пре подношења захтева, уписати тачне податке о радном месту и заради и испратити рок задржавања запосленог након уговора."
-        )
+        stavke = [
+            "<strong>ДЕТАЉАН ВОДИЧ: Субвенције за запошљавање</strong>",
+            "- <strong>1. Услови:</strong> Редовне зараде и задржавање новозапосленог на истом месту најмање 12 месеци.",
+            "- <strong>2. Документација:</strong> Захтев, CROSO потврда о броју запослених, доказ о измиреним порезима.",
+            "- <strong>3. Попуњавање:</strong> Проверити стање на CROSO пре предаје и уписати тачне податке о радном месту."
+        ]
     elif izvor_skraceno == "Град Београд":
-        return (
-            "<strong>ДЕТАЉАН ВОДИЧ: Град Београд (Секретаријат за привреду)</strong><br>"
-            "- <strong>1
+        stavke = [
+            "<strong>ДЕТАЉАН ВОДИЧ: Град Београд</strong>",
+            "- <strong>1. Услов:</strong> Седиште привредног субјекта на територији београдских општина.",
+            "- <strong>2. Документација:</strong> Образац пријаве, извод из АПР-а, потврда Пореске управе.",
+            "- <strong>3. Попуњавање:</strong> Попунити сва обавезна поља, ускладити ПИБ и адресу са АПР-ом и пратити рокове."
+        ]
+    else:
+        stavke = [
+            f"<strong>ДЕТАЉАН ВОДИЧ — {izvor_skraceno}</strong>",
+            "- <strong>1. Провера:</strong> Прочитати текст јавног позива са званичног линка и проверити рок.",
+            "- <strong>2. Документација:</strong> Решење/извод АПР-а, потврда НБС о неблокираности, пореско уверење.",
+            "- <strong>3. Попуњавање:</strong> Ускладити ПИБ, МБ, шифру делатности и предрачуне са условима позива."
+        ]
+
+    return "<br>".join(stavke)
+
+def ucitaj_postojece():
+    if os.path.exists("podaci.json"):
+        try:
+            with open("podaci.json", "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return {"poslednje_azuriranje": "", "konkursi": [], "status_izvora": {}}
+
+def pokreni_pretragu():
+    baza = ucitaj_postojece()
+    postojeci_linkovi = {}
+    for s in baza.get("konkursi", []):
+        link_s = s.get("link", "")
+        naslov_s = s.get("naslov", "")
+        if sadrzi_ponistenje(naslov_s) or sadrzi_ponistenje(link_s):
+            continue
+        if odgovara_kljucnim_recima(naslov_s, s.get("izvor", "")):
+            ocisceni_obrasci = [
+                o for o in (s.get("obrasci") or [])
+                if not sadrzi_ponistenje(o.get("naziv", "")) and not sadrzi_ponistenje(o.get("url", ""))
+            ]
+            s["obrasci"] = ocisceni_obrasci
+            postojeci_linkovi[link_s] = s
+
+    danas = datetime.now().strftime("%Y-%m-%d")
+    vreme_sada = datetime.now().strftime("%d.%m.%Y. у %H:%M")
+    status_izvora = {}
+
+    for izvor in IZVORI:
+        pronadjeno_za_izvor = 0
+        try:
+            odgovor = requests.get(izvor["url"], headers=HEADERS, timeout=25, verify=False)
+            odgovor.encoding = odgovor.apparent_encoding or "utf-8"
+            soup = BeautifulSoup(odgovor.text, "html.parser")
+
+            for a in soup.find_all("a", href=True):
+                if a.find_parent(["nav", "header", "footer"]):
+                    continue
+
+                naslov = ocisti_tekst(a.get_text())
+                if not odgovara_kljucnim_recima(naslov, izvor["skraceno"]):
+                    continue
+
+                pun_link = napravi_pun_link(a["href"], izvor["baza_url"])
+                if not pun_link or pun_link.rstrip("/") == izvor["url"].rstrip("/"):
+                    continue
+                if sadrzi_ponistenje(naslov) or sadrzi_ponistenje(pun_link):
+                    continue
+
+                soup_stranice = None
+                if pun_link.startswith("http") and not pun_link.lower().endswith(OBRAZAC_NASTAVCI):
+                    try:
+                        r_pod = requests.get(pun_link, headers=HEADERS, timeout=12, verify=False)
+                        r_pod.encoding = r_pod.apparent_encoding or "utf-8"
+                        soup_stranice = BeautifulSoup(r_pod.text, "html.parser")
+                    except Exception:
+                        soup_stranice = None
+
+                srz = izvuci_srz_subvencije(naslov, izvor["skraceno"], pun_link, soup_stranice)
+                obrasci = izvuci_obrasce_sa_stranice(soup_stranice, izvor["baza_url"], pun_link)
+                detalji = generisi_detaljnu_razradu(naslov, izvor["skraceno"])
+
+                if pun_link not in postojeci_linkovi:
+                    postojeci_linkovi[pun_link] = {
+                        "naslov": naslov,
+                        "srz_subvencije": srz,
+                        "izvor": izvor["skraceno"],
+                        "izvor_pun": izvor["naziv"],
+                        "link": pun_link,
+                        "datum_pronalaska": danas,
+                        "detalji": detalji,
+                        "obrasci": obrasci
+                    }
+                    pronadjeno_za_izvor += 1
+                else:
+                    postojeci_linkovi[pun_link]["srz_subvencije"] = srz
+                    postojeci_linkovi[pun_link]["detalji"] = detalji
+                    postojeci_linkovi[pun_link]["obrasci"] = obrasci
+
+            status_izvora[izvor["skraceno"]] = f"ОК (нових: {pronadjeno_za_izvor})"
+        except Exception as e:
+            status_izvora[izvor["skraceno"]] = f"Грешка ({type(e).__name__})"
+
+    svi_konkursi = sorted(
+        postojeci_linkovi.values(),
+        key=lambda x: x.get("datum_pronalaska", "2000-01-01"),
+        reverse=True
+    )
+
+    rezultat = {
+        "poslednje_azuriranje": vreme_sada,
+        "status_izvora": status_izvora,
+        "konkursi": svi_konkursi[:150]
+    }
+
+    with open("podaci.json", "w", encoding="utf-8") as f:
+        json.dump(rezultat, f, ensure_ascii=False, indent=2)
+
+    print("Ажурирање завршено:", vreme_sada)
+
+if __name__ == "__main__":
+    pokreni_pretragu()
